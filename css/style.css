@@ -416,3 +416,56 @@ footer {
   font-weight: 600; transition: opacity .2s;
 }
 .lang-switch:hover { opacity: .85; }
+
+/* ─── SIGNUP POPUP ──────────────────────────────────────── */
+.popup-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,.88); backdrop-filter: blur(10px);
+  align-items: center; justify-content: center;
+}
+.popup-overlay.open { display: flex; }
+.popup-box {
+  background: var(--black2); border: 1px solid var(--gold-d);
+  padding: 56px 48px; max-width: 480px; width: 90%; position: relative;
+  animation: fadeUp .35s ease both;
+}
+.popup-close {
+  position: absolute; top: 20px; right: 24px;
+  font-size: 18px; color: #555; cursor: pointer;
+  background: none; border: none; font-family: var(--sans);
+  transition: color .2s; line-height: 1;
+}
+.popup-close:hover { color: var(--gold); }
+.popup-eyebrow {
+  font-size: 9px; letter-spacing: 4px; color: var(--gold);
+  text-transform: uppercase; display: block; margin-bottom: 16px; font-weight: 400;
+}
+.popup-title {
+  font-family: var(--serif); font-size: 34px; color: var(--white);
+  margin-bottom: 10px; font-weight: 600; line-height: 1.2;
+}
+.popup-sub { font-size: 13px; color: #666; margin-bottom: 36px; line-height: 1.9; }
+.popup-field { margin-bottom: 18px; }
+.popup-field label {
+  display: block; font-size: 9px; letter-spacing: 3px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 8px; font-weight: 400;
+}
+.popup-field input {
+  width: 100%; background: var(--black3); border: 1px solid var(--gold-d);
+  color: var(--white); font-family: var(--sans); font-size: 14px; font-weight: 300;
+  padding: 14px 16px; outline: none; transition: border-color .2s;
+}
+.popup-field input:focus { border-color: var(--gold-m); }
+.popup-field input::placeholder { color: #333; }
+.popup-submit { width: 100%; margin-top: 10px; cursor: pointer; border: none; }
+.popup-note { font-size: 10px; color: #444; margin-top: 16px; text-align: center; letter-spacing: 1px; }
+.popup-success { display: none; text-align: center; padding: 16px 0; }
+.popup-success-icon {
+  font-family: var(--serif); font-size: 52px; color: var(--gold);
+  margin-bottom: 20px; line-height: 1;
+}
+.popup-success h3 {
+  font-family: var(--serif); font-size: 26px; color: var(--white);
+  margin-bottom: 12px; font-weight: 400;
+}
+.popup-success p { font-size: 13px; color: #666; line-height: 2; }

@@ -1,4 +1,63 @@
 
+// ─── POPUP ───────────────────────────────────────────────
+function openPopup(e) {
+  e.preventDefault();
+  document.getElementById('signupPopup').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePopup() {
+  document.getElementById('signupPopup').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Wire all apply-triggering buttons
+  document.querySelectorAll(
+    'a[href="#apply"], a.nav-cta, a.pkg-cta, a.btn-g[href^="mailto"], a.btn-o[href^="mailto"]'
+  ).forEach(function (a) {
+    var text = a.textContent.toLowerCase();
+    if (!text.includes('contact') && !text.includes('kontakt') && !text.includes('instagram')) {
+      a.addEventListener('click', openPopup);
+    }
+  });
+
+  // Close on backdrop click
+  document.getElementById('signupPopup').addEventListener('click', function (e) {
+    if (e.target === this) closePopup();
+  });
+
+  // Form submit via Formspree
+  var form = document.getElementById('signupForm');
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('.popup-submit');
+      btn.style.opacity = '.6';
+      btn.disabled = true;
+      try {
+        var res = await fetch('https://formspree.io/f/erm@irisintuitiv.dk', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          document.getElementById('signupFormInner').style.display = 'none';
+          document.getElementById('signupSuccess').style.display = 'block';
+        } else {
+          btn.style.opacity = '1';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        btn.style.opacity = '1';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  }
+});
+
+// ─── TESTIMONIAL CAROUSEL ─────────────────────────────────
 (function(){
   const track = document.getElementById('tTrack');
   const dotsEl = document.getElementById('tDots');

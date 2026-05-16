@@ -11,6 +11,34 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="popup-overlay" id="signupPopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div id="signupFormInner">
+      <span class="popup-eyebrow">Ansøg om din plads</span>
+      <div class="popup-title">Tag det første skridt.</div>
+      <p class="popup-sub">Maks. 10 mænd. København, september &amp; oktober 2025.<br>Emilie vender tilbage inden for 48 timer.</p>
+      <form id="signupForm">
+        <div class="popup-field">
+          <label>Fulde navn</label>
+          <input type="text" name="name" placeholder="Dit fulde navn" required>
+        </div>
+        <div class="popup-field">
+          <label>E-mailadresse</label>
+          <input type="email" name="email" placeholder="din@email.dk" required>
+        </div>
+        <button type="submit" class="btn-g popup-submit">Send min ansøgning</button>
+      </form>
+      <p class="popup-note">Dine oplysninger behandles fortroligt og deles aldrig.</p>
+    </div>
+    <div class="popup-success" id="signupSuccess">
+      <div class="popup-success-icon">✦</div>
+      <h3>Ansøgning modtaget.</h3>
+      <p>Tak fordi du tog dette skridt.<br>Emilie kontakter dig snarest.</p>
+    </div>
+  </div>
+</div>
+
 <a href="index.html" class="lang-switch">English</a>
 <!-- ═══════════════════════════════════════════════════════ NAV -->
 <nav>
