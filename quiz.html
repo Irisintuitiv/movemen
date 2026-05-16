@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is MOVEMEN For You? — Self-Reflection Questionnaire</title>
+<meta name="description" content="Take a moment to reflect honestly. This short questionnaire helps you understand whether MOVEMEN is the right step for you right now.">
+<meta property="og:title" content="Is MOVEMEN For You?">
+<meta property="og:description" content="A short self-reflection questionnaire. If reading these questions makes you think: 'Yes — that's me.' Then MOVEMEN is likely exactly what you need.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://movemen.dk/quiz.html">
+<meta property="og:image" content="https://movemen.dk/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.qhero {
+  min-height: 62vh; display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: flex-end;
+  padding: 120px 80px 80px; background: var(--black);
+  border-bottom: 1px solid var(--gold-d); position: relative; overflow: hidden;
+}
+.qhero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(200,169,110,.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.qhero-ey { font-size: 11px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; font-weight: 500; }
+.qhero-h { font-family: var(--serif); font-size: 72px; font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 28px; letter-spacing: 1px; max-width: 700px; }
+.qhero-b { font-size: 17px; color: #C8BFA8; line-height: 1.9; max-width: 580px; font-weight: 400; margin-bottom: 18px; }
+.qhero-it { font-family: var(--serif); font-size: 20px; color: #C8BFA8; font-style: italic; font-weight: 400; line-height: 1.7; max-width: 560px; }
+
+/* Quiz area */
+.quiz-wrap {
+  background: var(--black2); padding: 96px 80px; border-bottom: 1px solid var(--gold-d);
+}
+
+/* Progress */
+.quiz-prog { display: flex; align-items: center; gap: 24px; margin-bottom: 72px; }
+.quiz-prog-bar { flex: 1; height: 1px; background: var(--gold-d); position: relative; }
+.quiz-prog-fill { position: absolute; top: 0; left: 0; height: 100%; background: var(--gold); transition: width .4s ease; }
+.quiz-prog-lbl { font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 500; white-space: nowrap; }
+
+/* Cards */
+.qcard { max-width: 680px; margin: 0 auto; display: none; }
+.qcard.active { display: block; animation: qfade .4s ease; }
+@keyframes qfade { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+
+.qcard-num { font-size: 10px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; font-weight: 500; }
+.qcard-q { font-family: var(--serif); font-size: 36px; color: var(--white); font-weight: 400; line-height: 1.45; margin-bottom: 16px; }
+.qcard-sub { font-size: 13px; color: #7A7060; line-height: 2.1; margin-bottom: 36px; padding: 0; list-style: none; }
+.qcard-sub li::before { content: '— '; color: var(--gold); }
+
+.q-opts { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
+.q-opt {
+  display: flex; align-items: center; gap: 20px;
+  padding: 20px 26px; border: 1px solid var(--gold-d);
+  background: transparent; cursor: pointer;
+  font-family: var(--sans); font-size: 15px; color: #C8BFA8; font-weight: 400;
+  letter-spacing: .5px; text-align: left; width: 100%;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.q-opt:hover { border-color: var(--gold-m); background: rgba(200,169,110,.04); color: var(--white); }
+.q-opt.sel { border-color: var(--gold); background: rgba(200,169,110,.07); color: var(--white); }
+.q-dot { width: 10px; height: 10px; border: 1px solid var(--gold-d); border-radius: 50%; flex-shrink: 0; transition: background .2s, border-color .2s; }
+.q-opt.sel .q-dot { background: var(--gold); border-color: var(--gold); }
+
+/* Nav */
+.quiz-nav { max-width: 680px; margin: 44px auto 0; display: flex; justify-content: flex-start; }
+.quiz-back-btn {
+  font-size: 10px; letter-spacing: 3px; color: #4A4438; text-transform: uppercase;
+  cursor: pointer; font-weight: 500; background: none; border: none; padding: 0;
+  transition: color .2s; font-family: var(--sans);
+}
+.quiz-back-btn:hover { color: var(--gold); }
+
+/* Result */
+.quiz-result { display: none; max-width: 680px; margin: 0 auto; text-align: center; }
+.quiz-result.show { display: block; animation: qfade .6s ease; }
+.qr-sym { font-family: var(--serif); font-size: 80px; color: var(--gold); line-height: 1; margin-bottom: 36px; font-weight: 300; }
+.qr-title { font-family: var(--serif); font-size: 52px; color: var(--white); font-weight: 600; line-height: 1.2; margin-bottom: 28px; }
+.qr-rule { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 32px; }
+.qr-body { font-size: 17px; color: #C8BFA8; line-height: 1.9; max-width: 520px; margin: 0 auto 44px; font-weight: 400; }
+.qr-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Fit sections */
+.fit-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--gold-d);
+}
+.fit-col { padding: 72px; background: var(--black2); }
+.fit-col-yes { background: var(--black3); }
+.fit-col h3 { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 36px; font-weight: 500; }
+.fit-ul { list-style: none; padding: 0; margin: 0; }
+.fit-ul li {
+  font-size: 16px; color: #C8BFA8; line-height: 1; padding: 15px 0;
+  border-bottom: 1px solid var(--gold-d); font-weight: 400;
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.fit-ul li:last-child { border-bottom: none; }
+.fit-ul li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+.fit-ul-no li { color: #6A6050; }
+.fit-ul-no li::before { color: #3A3428; }
+
+/* Final reflection */
+.qreflect {
+  background: var(--black); padding: 104px 80px;
+  text-align: center; border-bottom: 1px solid var(--gold-d);
+}
+.qreflect-rule { width: 36px; height: 1px; background: var(--gold); margin: 0 auto 60px; }
+.qreflect-q {
+  font-family: var(--serif); font-size: 38px; color: var(--white);
+  font-weight: 400; line-height: 1.55; max-width: 680px; margin: 0 auto 60px;
+}
+.qreflect-q2 { color: #9A9080; }
+.qreflect-cta { margin-top: 60px; }
+
+@media (max-width: 900px) {
+  .qhero { padding: 100px 28px 64px; }
+  .qhero-h { font-size: 44px; }
+  .quiz-wrap { padding: 64px 28px; }
+  .qcard-q { font-size: 26px; }
+  .fit-row { grid-template-columns: 1fr; }
+  .fit-col { padding: 40px 28px; }
+  .qreflect { padding: 64px 28px; }
+  .qreflect-q { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MOVEMEN</a>
+  <div class="nav-links">
+    <a href="index.html#program">Program</a>
+    <a href="index.html#one-to-one">1:1 Sessions</a>
+    <a href="index.html#executive">Executive</a>
+    <a href="index.html#stories">Stories</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="index.html#apply" class="nav-cta">Apply now</a>
+</nav>
+
+<!-- HERO -->
+<div class="qhero">
+  <div class="qhero-ey">Self-reflection</div>
+  <div class="qhero-h">Is MOVEMEN<br>for you?</div>
+  <p class="qhero-b">Before joining, take a moment to reflect honestly. MOVEMEN is not about becoming a professional dancer. It is about becoming more free, grounded, confident, and connected in yourself.</p>
+  <p class="qhero-it">If reading these questions makes you think: <strong style="font-style:normal;color:var(--gold)">"Yes — that's me."</strong><br>Then MOVEMEN is likely exactly what you need.</p>
+</div>
+
+<!-- QUESTIONNAIRE -->
+<div class="quiz-wrap" id="quizWrap">
+
+  <div class="quiz-prog" id="quizProg">
+    <div class="quiz-prog-lbl" id="progLbl">Question 1 of 7</div>
+    <div class="quiz-prog-bar"><div class="quiz-prog-fill" id="progFill" style="width:14%"></div></div>
+  </div>
+
+  <div id="quizCards">
+
+    <div class="qcard active" data-i="0">
+      <div class="qcard-num">01 — Self-reflection</div>
+      <div class="qcard-q">Do you often feel disconnected from your body, confidence, or self-expression?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="sometimes"><span class="q-dot"></span>Sometimes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="1">
+      <div class="qcard-num">02 — Self-reflection</div>
+      <div class="qcard-q">Do you overthink movement, dancing, social situations, or how others perceive you?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="sometimes"><span class="q-dot"></span>Sometimes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="2">
+      <div class="qcard-num">03 — Self-reflection</div>
+      <div class="qcard-q">Do you find it difficult to fully relax, express yourself, or be fully seen around others?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="sometimes"><span class="q-dot"></span>Sometimes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="3">
+      <div class="qcard-num">04 — Self-reflection</div>
+      <div class="qcard-q">Have you avoided dancing, movement, or social experiences because of insecurity or self-consciousness?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="sometimes"><span class="q-dot"></span>Sometimes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="4">
+      <div class="qcard-num">05 — Self-reflection</div>
+      <div class="qcard-q">Do you carry stress, pressure, tension, or emotional weight in your body?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="sometimes"><span class="q-dot"></span>Sometimes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="5">
+      <div class="qcard-num">06 — What you want</div>
+      <div class="qcard-q">Do you want to feel more confident, free, grounded, and alive in yourself?</div>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+      </div>
+    </div>
+
+    <div class="qcard" data-i="6">
+      <div class="qcard-num">07 — Readiness</div>
+      <div class="qcard-q">Are you open to this kind of work?</div>
+      <ul class="qcard-sub">
+        <li>Movement and dance</li>
+        <li>Nervous system regulation</li>
+        <li>Emotional growth and self-reflection</li>
+        <li>Brotherhood and support</li>
+        <li>Stepping outside your comfort zone</li>
+        <li>Being challenged in healthy ways</li>
+      </ul>
+      <div class="q-opts">
+        <button class="q-opt" data-v="yes"><span class="q-dot"></span>Yes</button>
+        <button class="q-opt" data-v="ready"><span class="q-dot"></span>I am ready for that</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="quiz-nav" id="quizNav">
+    <button class="quiz-back-btn" id="backBtn" onclick="goBack()" style="visibility:hidden">← Back</button>
+  </div>
+
+  <div class="quiz-result" id="quizResult">
+    <div class="qr-sym">✦</div>
+    <div class="qr-title" id="rTitle">MOVEMEN is for you.</div>
+    <div class="qr-rule"></div>
+    <p class="qr-body" id="rBody"></p>
+    <div class="qr-ctas">
+      <a href="index.html#apply" class="btn-g">Apply for your spot</a>
+      <a href="index.html#one-to-one" class="btn-o">Explore 1:1 sessions</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOR YOU / NOT FOR YOU -->
+<div class="fit-row">
+  <div class="fit-col fit-col-yes">
+    <h3>This program is likely for you if</h3>
+    <ul class="fit-ul">
+      <li>You are tired of holding yourself back</li>
+      <li>You want more confidence and freedom in your body and mind</li>
+      <li>You overthink social situations or self-expression</li>
+      <li>You want to feel more grounded, masculine, and alive</li>
+      <li>You want to stop caring so much about judgment</li>
+      <li>You are open-minded and willing to grow</li>
+      <li>You know deep down there is more inside of you</li>
+      <li>You are willing to be uncomfortable in order to transform</li>
+    </ul>
+  </div>
+  <div class="fit-col">
+    <h3>It may not be for you if</h3>
+    <ul class="fit-ul fit-ul-no">
+      <li>You only want choreography or technical dance training</li>
+      <li>You are unwilling to step outside your comfort zone</li>
+      <li>You are closed off to self-reflection or personal growth</li>
+      <li>You want change without participation or effort</li>
+      <li>You are not willing to be challenged</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FINAL REFLECTION -->
+<div class="qreflect">
+  <div class="qreflect-rule"></div>
+  <p class="qreflect-q">What would your life look like if you finally stopped holding yourself back?</p>
+  <p class="qreflect-q qreflect-q2">And what could become possible if you fully trusted yourself, your body, and your expression?</p>
+  <div class="qreflect-cta">
+    <a href="index.html#apply" class="btn-g">Apply for your spot</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">MOVEMEN</div>
+  <div class="footer-copy">© 2026 MOVEMEN with Emilie Rose</div>
+  <div class="footer-links">
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="mailto:hello@movemen.dk">Contact</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const answers = new Array(7).fill(null);
+  const cards = document.querySelectorAll('.qcard');
+  const total = cards.length;
+  let cur = 0;
+
+  function renderProgress() {
+    const pct = Math.round(((cur + 1) / total) * 100);
+    document.getElementById('progFill').style.width = pct + '%';
+    document.getElementById('progLbl').textContent = 'Question ' + (cur + 1) + ' of ' + total;
+    document.getElementById('backBtn').style.visibility = cur > 0 ? 'visible' : 'hidden';
+  }
+
+  function showCard(index) {
+    cards.forEach(function (c, i) { c.classList.toggle('active', i === index); });
+    const opts = cards[index].querySelectorAll('.q-opt');
+    opts.forEach(function (o) { o.classList.toggle('sel', answers[index] === o.dataset.v); });
+    renderProgress();
+  }
+
+  function showResult() {
+    document.getElementById('quizCards').style.display = 'none';
+    document.getElementById('quizProg').style.display = 'none';
+    document.getElementById('quizNav').style.display = 'none';
+
+    const yesCount = answers.filter(function (a) { return a === 'yes'; }).length;
+    var title, body;
+
+    if (yesCount >= 5) {
+      title = 'MOVEMEN is for you.';
+      body = 'Your reflections are clear. You are exactly the kind of man this work is designed for. You feel it, you want change, and you are ready — even if it doesn\'t fully feel that way yet. The only step left is saying yes to yourself.';
+    } else {
+      title = 'MOVEMEN is likely for you.';
+      body = 'Your reflections show that you are open to growth, connection, and real change — and that is exactly where transformation begins. Reach out, and we can explore together whether this is the right step for you right now.';
+    }
+
+    document.getElementById('rTitle').textContent = title;
+    document.getElementById('rBody').textContent = body;
+
+    var resultEl = document.getElementById('quizResult');
+    resultEl.classList.add('show');
+    setTimeout(function () {
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+
+  window.goBack = function () {
+    if (cur > 0) {
+      cur--;
+      document.getElementById('quizResult').classList.remove('show');
+      document.getElementById('quizCards').style.display = '';
+      document.getElementById('quizProg').style.display = '';
+      document.getElementById('quizNav').style.display = '';
+      showCard(cur);
+    }
+  };
+
+  cards.forEach(function (card, cardIdx) {
+    card.querySelectorAll('.q-opt').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        answers[cardIdx] = this.dataset.v;
+        card.querySelectorAll('.q-opt').forEach(function (o) { o.classList.remove('sel'); });
+        this.classList.add('sel');
+        setTimeout(function () {
+          if (cardIdx < total - 1) {
+            cur = cardIdx + 1;
+            showCard(cur);
+          } else {
+            showResult();
+          }
+        }, 320);
+      });
+    });
+  });
+
+  renderProgress();
+})();
+</script>
+</body>
+</html>
