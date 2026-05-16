@@ -410,14 +410,29 @@ footer {
   display: block; font-size: 10px; letter-spacing: 3px;
   color: var(--gold); text-transform: uppercase; margin-bottom: 10px; font-weight: 500;
 }
-.popup-field input {
+.popup-field input,
+.popup-field select,
+.popup-field textarea {
   width: 100%; background: var(--black3); border: 1px solid var(--gold-d);
   color: var(--white); font-family: var(--sans); font-size: 15px; font-weight: 400;
-  padding: 16px 18px; outline: none; transition: border-color .2s;
+  padding: 16px 18px; outline: none; transition: border-color .2s; box-sizing: border-box;
 }
-.popup-field input:focus { border-color: var(--gold-m); }
-.popup-field input::placeholder { color: #5A5040; }
+.popup-field select { appearance: none; cursor: pointer; }
+.popup-field select option { background: var(--black3); color: var(--white); }
+.popup-field textarea { resize: vertical; min-height: 80px; }
+.popup-field input:focus,
+.popup-field select:focus,
+.popup-field textarea:focus { border-color: var(--gold-m); }
+.popup-field input::placeholder,
+.popup-field textarea::placeholder { color: #5A5040; }
 .popup-submit { width: 100%; margin-top: 10px; cursor: pointer; border: none; }
+.btn-waitlist {
+  display: inline-block; padding: 18px 36px;
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 500;
+  color: var(--gold); border: 1px solid var(--gold-d); text-decoration: none;
+  transition: border-color .2s, color .2s;
+}
+.btn-waitlist:hover { border-color: var(--gold-m); color: var(--white); }
 .popup-note { font-size: 11px; color: #5A5040; margin-top: 18px; text-align: center; letter-spacing: 1px; font-weight: 400; }
 .popup-success { display: none; text-align: center; padding: 20px 0; }
 .popup-success-icon { font-family: var(--serif); font-size: 56px; color: var(--gold); margin-bottom: 24px; line-height: 1; }

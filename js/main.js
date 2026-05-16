@@ -10,6 +10,17 @@ function closePopup() {
   document.body.style.overflow = '';
 }
 
+// ─── WAITLIST POPUP ──────────────────────────────────────
+function openWaitlist(e) {
+  e.preventDefault();
+  document.getElementById('waitlistPopup').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeWaitlist() {
+  document.getElementById('waitlistPopup').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Wire all apply-triggering buttons
   document.querySelectorAll(
@@ -25,6 +36,42 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('signupPopup').addEventListener('click', function (e) {
     if (e.target === this) closePopup();
   });
+
+  var waitlistEl = document.getElementById('waitlistPopup');
+  if (waitlistEl) {
+    waitlistEl.addEventListener('click', function (e) {
+      if (e.target === this) closeWaitlist();
+    });
+  }
+
+  // Waitlist form submit
+  var waitlistForm = document.getElementById('waitlistForm');
+  if (waitlistForm) {
+    waitlistForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = waitlistForm.querySelector('.popup-submit');
+      btn.style.opacity = '.6';
+      btn.disabled = true;
+      try {
+        var data = new FormData(waitlistForm);
+        data.append('access_key', 'REPLACE_WITH_WEB3FORMS_KEY');
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', body: data, headers: { Accept: 'application/json' }
+        });
+        var json = await res.json();
+        if (json.success) {
+          document.getElementById('waitlistFormInner').style.display = 'none';
+          document.getElementById('waitlistSuccess').style.display = 'block';
+        } else {
+          btn.style.opacity = '1'; btn.disabled = false;
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        btn.style.opacity = '1'; btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  }
 
   // Form submit via Web3Forms
   var form = document.getElementById('signupForm');
