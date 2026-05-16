@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target === this) closePopup();
   });
 
-  // Form submit via Formspree
+  // Form submit via Web3Forms
   var form = document.getElementById('signupForm');
   if (form) {
     form.addEventListener('submit', async function (e) {
@@ -35,12 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.style.opacity = '.6';
       btn.disabled = true;
       try {
-        var res = await fetch('https://formspree.io/f/erm@irisintuitiv.dk', {
+        var data = new FormData(form);
+        data.append('access_key', 'REPLACE_WITH_WEB3FORMS_KEY');
+        var res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: new FormData(form),
+          body: data,
           headers: { Accept: 'application/json' }
         });
-        if (res.ok) {
+        var json = await res.json();
+        if (json.success) {
           document.getElementById('signupFormInner').style.display = 'none';
           document.getElementById('signupSuccess').style.display = 'block';
         } else {
