@@ -49,36 +49,64 @@
 <a href="index.html" class="lang-switch">English</a>
 <!-- ═══════════════════════════════════════════════════════ NAV -->
 <nav>
-  <div class="nav-logo">MOVEMEN</div>
+  <div class="nav-brand">
+    <div class="nav-logo">MOVEMEN</div>
+    <div class="nav-logo-sub">med Emilie Rose Milling</div>
+  </div>
   <div class="nav-links">
-    <a href="#program">Forløb</a>
     <a href="#one-to-one">1:1 Sessioner</a>
+    <a href="#program">Forløb</a>
     <a href="#executive">Executive</a>
     <a href="#stories">Historier</a>
+    <a href="quiz.html">Er det for mig?</a>
     <a href="about.html">Om</a>
   </div>
   <a href="#apply" class="nav-cta">Ansøg nu</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Åbn menu" aria-expanded="false">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
 </nav>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Luk menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#one-to-one">1:1 Sessioner</a>
+  <a href="#program">Forløb</a>
+  <a href="#executive">Executive</a>
+  <a href="#stories">Historier</a>
+  <a href="quiz.html">Er det for mig?</a>
+  <a href="about.html">Om</a>
+  <a href="#apply" class="btn-g" style="margin-top:12px">Ansøg nu</a>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ HERO -->
-<section class="hero" style="background-image:url(images/hero.jpg);background-size:cover;background-position:center 40%;">
-  <div class="hero-eyebrow">med Emilie Rose</div>
-  <div class="hero-title">MOVEMEN</div>
-  <div class="hero-sub" style="">A movement journey for men.</div>
-  <div class="gl-c"></div>
-  <p class="hero-body">
-    Du har brugt år på at være komfortabel<br>
-    med at være ukomfortabel i din krop.
-  </p>
-  <div class="hero-ctas">
-    <a href="#apply" class="btn-g">Ansøg om din plads</a>
-    <a href="#program" class="btn-o">Læs mere ↓</a>
+<section class="hero" style="background-image:url(images/hero.jpg);background-size:cover;background-position:center 40%;text-align:center;align-items:center;justify-content:center;">
+  <div style="position:relative;z-index:1;width:100%;max-width:700px;">
+    <div class="hero-eyebrow" style="margin-bottom:16px;">med Emilie Rose Milling</div>
+    <div class="hero-title" style="font-size:80px;margin-bottom:16px;">MOVEMEN</div>
+    <div class="hero-sub" style="margin-bottom:20px;">Private 1:1 bevægelsessessioner <span class="gold-gradient">for mænd.</span></div>
+    <p class="hero-body" style="margin:0 auto 36px;">
+      Føl dig mere tryg, fri og komfortabel i din krop. Gennem private bevægelsessessioner skræddersyet helt til dig — dit udgangspunkt, dit tempo, din transformation.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#apply" class="btn-g">Book en 1:1 session</a>
+      <a href="#one-to-one" class="btn-o">Læs mere</a>
+    </div>
+    <div style="margin-top:40px;display:flex;align-items:center;justify-content:center;gap:20px;font-size:12px;color:rgba(200,185,160,.6);font-weight:400;letter-spacing:2px;">
+      København
+      <span style="color:var(--gold-dk)">·</span>
+      Online tilgængeligt
+      <span style="color:var(--gold-dk)">·</span>
+      For mænd
+    </div>
   </div>
-  <div class="hero-stats">
+  <div class="hero-stats" style="width:100%;margin-top:56px;">
     <div class="hstat"><div class="hstat-n">15+</div><div class="hstat-l">Års undervisning i bevægelse</div></div>
-    <div class="hstat"><div class="hstat-n">3</div><div class="hstat-l">Års arbejde med mænd</div></div>
-    <div class="hstat"><div class="hstat-n">10</div><div class="hstat-l">Pladser per program</div></div>
-    <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Ugers rejse</div></div>
+    <div class="hstat"><div class="hstat-n">3</div><div class="hstat-l">Års eksklusivt arbejde med mænd</div></div>
+    <div class="hstat"><div class="hstat-n">1:1</div><div class="hstat-l">Bevægelsessessioner</div></div>
+    <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Ugers gruppeprogram</div></div>
   </div>
 </section>
 
@@ -86,166 +114,151 @@
 
 
 
-<!-- IMAGE 1 — Emilie in studio, profile -->
-<div style="position:relative;height:560px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.15);background-image:url(images/break-1.jpg);background-size:cover;background-position:center 30%;">
-  
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.15) 0%,rgba(8,8,8,0.05) 50%,rgba(8,8,8,0.4) 100%)"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.3) 0%,transparent 30%,transparent 70%,rgba(8,8,8,0.6) 100%)"></div>
-  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
-</div>
-
-<!-- Einstein quote — below image 1 -->
-<div style="background:var(--black);padding:88px 72px;text-align:center;border-bottom:1px solid var(--gold-d)">
+<!-- Einstein quote — below hero -->
+<div style="background:var(--black2);padding:64px 72px;text-align:center;border-bottom:1px solid var(--gold-d)">
+  <hr class="ornament-line" style="max-width:280px;margin:0 auto 40px;">
   <div style="max-width:680px;margin:0 auto">
-    <div style="width:36px;height:1px;background:var(--gold);margin:0 auto 44px"></div>
-    <div style="font-family:var(--serif);font-size:44px;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:20px">
-      "Nothing happens until<br>something moves."
-    </div>
+    <blockquote style="font-family:var(--serif);font-size:40px;font-weight:600;color:var(--white);line-height:1.25;margin-bottom:18px;font-style:italic">
+      "Nothing happens until something moves."
+    </blockquote>
     <div style="font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;font-weight:400">— Albert Einstein</div>
-    <div style="width:36px;height:1px;background:var(--gold);margin:44px auto 0"></div>
   </div>
+  <hr class="ornament-line" style="max-width:280px;margin:40px auto 0;">
 </div>
 
+<!-- ═══════════════════════════════════════════════════════ CHOOSE YOUR PATH -->
+<section class="sec">
+  <div style="text-align:center;margin-bottom:52px">
+    <span class="lbl" style="justify-content:center">Sådan arbejder du med Emilie Rose Milling</span>
+    <div class="serif-lg" style="margin-bottom:14px">Vælg din vej.</div>
+    <p class="body" style="margin:0 auto;text-align:center;max-width:540px">Hvert tilbud er et holdt rum — formet af Emilies undervisning og din villighed til at møde op.</p>
+  </div>
+  <div class="offers-grid">
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/about.jpg);background-size:cover;background-position:center top;"></div>
+      <div class="offer-body">
+        <div class="offer-title">1:1 private sessioner</div>
+        <p class="offer-desc">Bevægelsesarbejde bygget helt omkring dig. Din krop, din historie, dit tempo. København eller online.</p>
+        <p class="offer-price">Fra 3.500 kr.</p>
+        <a href="#one-to-one" class="offer-cta">Se pakker →</a>
+      </div>
+    </article>
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/break-2.jpg);background-size:cover;background-position:center 45%;"></div>
+      <div class="offer-body">
+        <div class="offer-title">8-ugers gruppeprogram</div>
+        <p class="offer-desc">Et transformativt forløb i København. Maks. 10 mænd. Onsdage 18:30 – 21:30.</p>
+        <p class="offer-price"><span style="font-size:10px;letter-spacing:3px;background:rgba(200,169,110,.1);border:1px solid var(--gold-d);border-radius:9999px;padding:4px 14px;text-transform:uppercase;">Kommer snart</span></p>
+        <p class="offer-price">4.995 – 5.995 kr.</p>
+        <a href="#program" class="offer-cta">Læs mere →</a>
+      </div>
+    </article>
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/break-1.jpg);background-size:cover;background-position:center 25%;"></div>
+      <div class="offer-body">
+        <div class="offer-title">MOVEMEN Executive</div>
+        <p class="offer-desc">Embodied leadership gennem bevægelse — tilstedeværelse, nervesystemregulering og dybde for mænd der leder.</p>
+        <p class="offer-price">Private sessioner tilgængelige</p>
+        <a href="#executive" class="offer-cta">Læs mere →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- IMAGE 1 — between For the Man Who and 1:1 -->
 <!-- ═══════════════════════════════════════════════════════ FOR THE MAN WHO -->
 <section class="sec-lt">
   <span class="lbl-dk">Dette er for dig</span>
   <div class="serif-lg-dk" style="max-width:520px;margin-bottom:36px">
-    Hvis du genkender dig selv her.
+    For den mand som.
   </div>
-  <div class="man-grid">
-    <div class="man-cell">
-      <ul class="man-list">
-        <li><span class="man-dash">—</span>Du vil føle dig komfortabel og fri i din krop</li>
-        <li><span class="man-dash">—</span>Du føler dig begrænset, anspændt eller afkoblet fra dig selv</li>
-        <li><span class="man-dash">—</span>Du vil danse trygt med din partner</li>
-        <li><span class="man-dash">—</span>Du vil bevæge dig gennem livet med kropslig selvtillid</li>
-        <li><span class="man-dash">—</span>Du vil træde ind i et rum og føle dig jordet og nærværende</li>
-        <li><span class="man-dash">—</span>Du er træt af at holde dig selv tilbage</li>
-      </ul>
-    </div>
-    <div class="man-cell">
-      <ul class="man-list">
-        <li><span class="man-dash">—</span>Du vil holde op med at stå ved baren mens alle andre danser</li>
-        <li><span class="man-dash">—</span>Du vil genoprette forbindelsen til vitalitet, frihed, glæde og selvudtryk</li>
-        <li><span class="man-dash">—</span>Du er træt af at føle dig akavet eller usikker på dansegulvet</li>
-        <li><span class="man-dash">—</span>Du vil føle dig mere levende, udtryksfuld og forbundet</li>
-        <li><span class="man-dash">—</span>Du er klar til at udfordre begrænsende overbevisninger og træde ind i vækst</li>
-        <li><span class="man-dash">—</span>Du vil have konkrete danseværktøjer du faktisk kan bruge socialt</li>
-      </ul>
-    </div>
+  <div style="max-width:680px">
+    <ul class="man-list">
+      <li><span class="man-dash">—</span>Vil føle sig mere komfortabel og fri i sin krop</li>
+      <li><span class="man-dash">—</span>Er træt af at føle sig begrænset eller bange på dansegulvet</li>
+      <li><span class="man-dash">—</span>Ønsker at danse med sin partner</li>
+      <li><span class="man-dash">—</span>Vil gå ind i et rum med kropslig selvtillid</li>
+      <li><span class="man-dash">—</span>Er træt af at holde sig tilbage og stå ved baren</li>
+      <li><span class="man-dash">—</span>Vil træde ud på dansegulvet og have det sjovt</li>
+      <li><span class="man-dash">—</span>Er træt af at skulle være beruset for at give slip og udtrykke sig</li>
+      <li><span class="man-dash">—</span>Vil have en selvtillid der lever i kroppen — ikke kun i hovedet</li>
+      <li><span class="man-dash">—</span>Er klar til at udfordre begrænsende overbevisninger og vokse</li>
+      <li><span class="man-dash">—</span>Vil have noget ægte — ikke endnu et kursus eller en hurtig løsning</li>
+    </ul>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════ 8-WEEK PROGRAM -->
-<section class="sec" id="program">
-  <span class="lbl">Det 8-ugers program</span>
+<!-- IMAGE 1 — between For the Man Who and 1:1 -->
+<div style="position:relative;height:600px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.15);background-image:url(images/break-1.jpg);background-size:cover;background-position:center 25%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.55) 0%,rgba(8,8,8,0.1) 60%,rgba(8,8,8,0.2) 100%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.2) 0%,transparent 30%,transparent 60%,rgba(8,8,8,0.6) 100%)"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
+  <div style="position:absolute;bottom:52px;left:80px;z-index:2;max-width:500px;">
+    <div style="font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;font-weight:500">København · September & Oktober 2026</div>
+    <div style="font-family:var(--serif);font-size:44px;color:var(--white);font-weight:400;line-height:1.25;">En bevægelsesrejse<br>for mænd.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ FOR THE MAN WHO -->
+<!-- ═══════════════════════════════════════════════════════ 1:1 -->
+<section class="sec" id="one-to-one">
+  <span class="lbl">1:1 Private sessioner</span>
   <div class="two-col">
     <div>
       <div class="serif-lg" style="margin-bottom:24px">
-        En 8-ugers transformerende<br>grupperejse for mænd.
+        For den mand der har brug for et forløb<br>bygget helt op om ham.
       </div>
-      <p class="body">Vi mødes én gang om ugen i 3 timer. Gruppen er bevidst lille — maksimalt 10 mænd — og skaber et kraftfuldt miljø for vækst, støtte, ansvarlighed og transformation.</p>
-      <p class="body">Dette er ikke en hurtig løsning. Vi går dybt. Vi arbejder med fundamentet for dit forhold til din krop, bevægelse, udtryk, selvtillid og nærvær.</p>
-      <p style="font-family:var(--serif);font-size:21px;color:var(--white);line-height:1.7;margin-bottom:32px;font-weight:600">
-        Hvis du møder op fuldt ud og gør arbejdet,<br>forlader du dette program som et forandret menneske.
-      </p>
+      <p class="body">Din krop. Din historie. Dit udgangspunkt. Dit tempo. Ingen fast pensum, ingen gruppedynamik — kun Emilies fulde opmærksomhed på dig og præcis hvad du har brug for.</p>
+      <p class="body">Hver mand der kommer, ankommer forskelligt. 1:1-formatet ærer det fuldt ud. Det vi arbejder med, hvordan vi arbejder og hvor vi går, formes helt af dig.</p>
       <span class="gl"></span>
-      <span class="lbl" style="margin-bottom:20px">Inkluderet i programmet</span>
-      <ul class="incl-list">
-        <li><span class="incl-dash">—</span>8 ugentlige gruppesessioner, 3 timer hver</li>
-        <li><span class="incl-dash">—</span>2 private 1:1 sessions (1.5 hours each) med Emilie Rose</li>
-        <li><span class="incl-dash">—</span>Hjemmeøvelser, praksis og integrationsværktøjer</li>
-        <li><span class="incl-dash">—</span>Et støttende broderskab og transformerende fællesskab</li>
-        <li><span class="incl-dash">—</span>MOVEMEN vandflaske + notesbog</li>
+      <span class="lbl" style="margin-bottom:16px">Sessionerne trækker på</span>
+      <ul class="cl">
+        <li><span class="dash">—</span>Bevægelses- og danseøvelser tilpasset den enkelte</li>
+        <li><span class="dash">—</span>Åndedrætsarbejde og nervesystemsregulering</li>
+        <li><span class="dash">—</span>Somatisk bevidsthed og kroppens intelligens</li>
+        <li><span class="dash">—</span>Rytme, musikalitet og kreativt udtryk</li>
+        <li><span class="dash">—</span>Qi Gong og jordforbindelsespraksis</li>
+        <li><span class="dash">—</span>Mindset, ægte samtaler og følelsesmæssigt udtryk</li>
+        <li><span class="dash">—</span>Kropslig selvtillid og jordet ledelsesnærvær</li>
+        <li><span class="dash">—</span>Målsætning, hjemmeøvelser og integration mellem sessionerne</li>
       </ul>
-      <div class="invest">
-        <div>
-          <div class="invest-price">4.995 – 5.995 kr.</div>
-          <div class="invest-lbl">Investering</div>
+      <p style="font-family:var(--serif);font-size:20px;color:var(--white);margin-top:28px;line-height:1.7;font-weight:600">
+        Dette er ikke coaching. Dette er ikke terapi.<br>Dette er bevægelsesarbejde på det dybeste niveau.
+      </p>
+    </div>
+    <div>
+      <span class="lbl" style="margin-bottom:20px">Pakker og investering</span>
+      <div class="pkg-grid" style="display:grid;grid-template-columns:1fr;gap:1px;background:var(--gold-d)">
+        <div class="pkg">
+          <span class="pkg-tag">Kom godt i gang</span>
+          <div class="pkg-name">3 sessioner</div>
+          <div class="pkg-desc">1,5 time hver. Personaliseret fokus, hjemmeøvelser og integrationsværktøjer. En kraftfuld begyndelse.</div>
+          <div class="pkg-price">3.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book nu →</a>
         </div>
-        <div class="invest-det">
-          <p>Onsdage 18:30 – 21:30<br>September og oktober 2026<br>København — Maksimalt 10 mænd</p>
+        <div class="pkg featured">
+          <span class="pkg-tag">Mest valgte</span>
+          <div class="pkg-name">5 sessioner</div>
+          <div class="pkg-desc">1,5 time hver. En dybere transformationsbue med personaliserede værktøjer og løbende støtte mellem sessionerne.</div>
+          <div class="pkg-price">5.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book nu →</a>
+        </div>
+        <div class="pkg">
+          <span class="pkg-tag">Hele rejsen</span>
+          <div class="pkg-name">10 sessioner</div>
+          <div class="pkg-desc">1,5 time hver. En komplet krop-sind transformation med løbende støtte og dyb integration.</div>
+          <div class="pkg-price">9.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book nu →</a>
         </div>
       </div>
-      <div style="margin-top:36px"><a href="#apply" class="btn-g">Ansøg om din plads</a></div>
-    </div>
-    <div>
-      <span class="lbl" style="margin-bottom:20px">Hvad vi arbejder med</span>
-      <div class="wwww-grid">
-        <div class="wwww-cell"><div class="wwww-t">Åndedrætsarbejde</div><div class="wwww-b">Nervesystemsregulering og jordforbindelse</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Meditation</div><div class="wwww-b">Nærvær, stilhed og indre bevidsthed</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Danseøvelser</div><div class="wwww-b">Konkrete trin til enhver social situation</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Musikalitet</div><div class="wwww-b">Rytme, timing, flow og udtryk</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Fri bevægelse</div><div class="wwww-b">Freestyle, improvisation og tillid</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Qi Gong</div><div class="wwww-b">Energi, jordforbindelse og kropsbevidsthed</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Kropsliggjort lederskab</div><div class="wwww-b">Nærvær, jordet selvtillid og retning</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Følelsesmæssigt udtryk</div><div class="wwww-b">At bevæge det ord ikke kan nå</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Ægte samtaler</div><div class="wwww-b">Mindset, ærlige samtaler og vækst</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Målsætning</div><div class="wwww-b">Ansvarlighed og integration</div></div>
-      </div>
+      <p style="font-size:13px;color:var(--mid);margin-top:16px;">København eller online. Planlæg direkte med Emilie.</p>
     </div>
   </div>
 </section>
 
-
-<!-- IMAGE 3 — Emilie mid-movement, pure joy -->
-<div style="position:relative;height:560px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-2.jpg);background-size:cover;background-position:center 20%;">
-  
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.4) 0%,rgba(8,8,8,0.1) 40%,rgba(8,8,8,0.1) 70%,rgba(8,8,8,0.4) 100%)"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.4) 0%,transparent 20%,transparent 75%,rgba(8,8,8,0.7) 100%)"></div>
-  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════ 8 WEEKS JOURNEY -->
-<section class="sec-off">
-  <span class="lbl">Rejsen</span>
-  <div class="serif-lg" style="max-width:400px;margin-bottom:48px">
-    Uge for uge.<br>Skridt for skridt.
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 64px">
-    <div>
-      <div class="week"><div class="wk-n">Uge 01</div><div class="wk-t">Jordforbindelse og det første skridt</div><div class="wk-d">Målsætning, intention, nærvær, jordforbindelse for nervesystemet og begyndelsen på rejsen.</div></div>
-      <div class="week"><div class="wk-n">Uge 02</div><div class="wk-t">De 4 elementer</div><div class="wk-d">Udforskning af forskellige bevægelseskvaliteter og energier i kroppen.</div></div>
-      <div class="week"><div class="wk-n">Uge 03</div><div class="wk-t">Dynamik</div><div class="wk-d">At lære rytme, flow, kontrast, timing og udtryk.</div></div>
-      <div class="week"><div class="wk-n">Uge 04</div><div class="wk-t">Dansegrund</div><div class="wk-d">Enkle trin, grooves, koordination og praktiske redskaber til social dans.</div></div>
-    </div>
-    <div style="border-left:1px solid var(--gold-d);padding-left:64px">
-      <div class="week"><div class="wk-n">Uge 05</div><div class="wk-t">Freestyle og flow</div><div class="wk-d">Fri bevægelse, improvisation, selvtillid og at lære at stole på sig selv.</div></div>
-      <div class="week"><div class="wk-n">Uge 06</div><div class="wk-t">At lede bevægelse</div><div class="wk-d">At lede dig selv, lede energi, lede en partner og kropsliggjort retning.</div></div>
-      <div class="week"><div class="wk-n">Uge 07</div><div class="wk-t">Find din stil</div><div class="wk-d">At opdage dit naturlige udtryk, din personlighed og din bevægelsesidentitet.</div></div>
-      <div class="week"><div class="wk-n">Uge 08</div><div class="wk-t">Integration og ekspansion</div><div class="wk-d">Integration, refleksion, fejring og nye mål for din fortsatte vækst.</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════ BROTHERHOOD -->
-<section class="sec-lt2">
-  <span class="lbl-dk">Broderskab og støtte</span>
-  <div class="two-col">
-    <div>
-      <div class="serif-lg-dk" style="margin-bottom:24px">
-        Dette handler ikke om perfektion.
-      </div>
-      <p class="body-dk">Dette er et rum hvor mænd støtter hinanden. Et rum til at udfordre dig selv. Et rum til at vokse. Et rum til at blive set.</p>
-      <p class="body-dk">Vi arbejder individuelt og sammen. Vi bliver hinandens spejle, ansvarlighedspartnere og et team.</p>
-      <p class="body-dk">Et løftende miljø hvor alle er med i det sammen.</p>
-      <span class="gl-dk"></span>
-    </div>
-    <div>
-      <div class="bro-stats">
-        <div class="bro-stat"><div class="bro-n">10</div><div class="bro-l">Mænd maksimalt</div></div>
-        <div class="bro-stat"><div class="bro-n">8</div><div class="bro-l">Uger sammen</div></div>
-      </div>
-      <div class="bro-quote">
-        <p>Et rum til at blive set.<br>Et rum til at vokse.<br>Et rum til endelig at slippe.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ═══════════════════════════════════════════════════════ EXECUTIVE -->
 <!-- ═══════════════════════════════════════════════════════ THE TRUTH -->
 <section class="sec">
   <span class="lbl">Sandheden</span>
@@ -284,6 +297,7 @@
 </div>
 
 <!-- IMAGE 2 — Emilie at the barre, focused -->
+<!-- IMAGE 2 — Emilie at the barre, focused -->
 <div style="position:relative;height:500px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-3.jpg);background-size:cover;background-position:center 25%;">
   
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.1) 0%,rgba(8,8,8,0.05) 40%,rgba(8,8,8,0.5) 100%)"></div>
@@ -292,6 +306,7 @@
   <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
 </div>
 
+<!-- ═══════════════════════════════════════════════════════ TESTIMONIALS -->
 <!-- ═══════════════════════════════════════════════════════ TESTIMONIALS -->
 <section id="stories" style="padding:96px 0;background:var(--black);border-bottom:1px solid var(--gold-d);overflow:hidden">
   <div style="padding:0 72px;margin-bottom:64px">
@@ -359,61 +374,6 @@
   </div>
 </section>
 <!-- ═══════════════════════════════════════════════════════ 1:1 -->
-<section class="sec" id="one-to-one">
-  <span class="lbl">1:1 Private sessioner</span>
-  <div class="two-col">
-    <div>
-      <div class="serif-lg" style="margin-bottom:24px">
-        For den mand der har brug for et forløb<br>bygget helt op om ham.
-      </div>
-      <p class="body">Din krop. Din historie. Dit udgangspunkt. Dit tempo. Ingen fast pensum, ingen gruppedynamik — kun Emilies fulde opmærksomhed på dig og præcis hvad du har brug for.</p>
-      <p class="body">Hver mand der kommer, ankommer forskelligt. 1:1-formatet ærer det fuldt ud. Det vi arbejder med, hvordan vi arbejder og hvor vi går, formes helt af dig.</p>
-      <span class="gl"></span>
-      <span class="lbl" style="margin-bottom:16px">Sessionerne trækker på</span>
-      <ul class="cl">
-        <li><span class="dash">—</span>Bevægelses- og danseøvelser tilpasset den enkelte</li>
-        <li><span class="dash">—</span>Åndedrætsarbejde og nervesystemsregulering</li>
-        <li><span class="dash">—</span>Somatisk bevidsthed og kroppens intelligens</li>
-        <li><span class="dash">—</span>Rytme, musikalitet og kreativt udtryk</li>
-        <li><span class="dash">—</span>Qi Gong og jordforbindelsespraksis</li>
-        <li><span class="dash">—</span>Mindset, ægte samtaler og følelsesmæssigt udtryk</li>
-        <li><span class="dash">—</span>Kropslig selvtillid og jordet ledelsesnærvær</li>
-        <li><span class="dash">—</span>Målsætning, hjemmeøvelser og integration mellem sessionerne</li>
-      </ul>
-      <p style="font-family:var(--serif);font-size:20px;color:var(--white);margin-top:28px;line-height:1.7;font-weight:600">
-        Dette er ikke coaching. Dette er ikke terapi.<br>Dette er bevægelsesarbejde på det dybeste niveau.
-      </p>
-    </div>
-    <div>
-      <span class="lbl" style="margin-bottom:20px">Pakker og investering</span>
-      <div class="pkg-grid" style="display:grid;grid-template-columns:1fr;gap:1px;background:var(--gold-d)">
-        <div class="pkg">
-          <span class="pkg-tag">Kom godt i gang</span>
-          <div class="pkg-name">3 sessioner</div>
-          <div class="pkg-desc">1,5 time hver. Personaliseret fokus, hjemmeøvelser og integrationsværktøjer. En kraftfuld begyndelse.</div>
-          <div class="pkg-price">3.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book nu →</a>
-        </div>
-        <div class="pkg featured">
-          <span class="pkg-tag">Mest valgte</span>
-          <div class="pkg-name">5 sessioner</div>
-          <div class="pkg-desc">1,5 time hver. En dybere transformationsbue med personaliserede værktøjer og løbende støtte mellem sessionerne.</div>
-          <div class="pkg-price">5.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book nu →</a>
-        </div>
-        <div class="pkg">
-          <span class="pkg-tag">Hele rejsen</span>
-          <div class="pkg-name">10 sessioner</div>
-          <div class="pkg-desc">1,5 time hver. En komplet krop-sind transformation med løbende støtte og dyb integration.</div>
-          <div class="pkg-price">9.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book nu →</a>
-        </div>
-      </div>
-      <p style="font-size:13px;color:var(--mid);margin-top:16px;">København eller online. Planlæg direkte med Emilie.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════════════════════════════════════════ EXECUTIVE -->
 <section class="sec" id="executive">
   <span class="lbl">MOVEMEN Executive</span>
@@ -456,6 +416,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════ ABOUT -->
+<!-- ═══════════════════════════════════════════════════════ ABOUT -->
 <section class="sec-off" id="about">
   <span class="lbl">Emilie Rose</span>
   <div class="two-col">
@@ -492,6 +453,124 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════ IS IT FOR YOU -->
+<!-- IMAGE 3 — Emilie mid-movement, pure joy -->
+<div style="position:relative;height:560px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-2.jpg);background-size:cover;background-position:center 20%;">
+  
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.4) 0%,rgba(8,8,8,0.1) 40%,rgba(8,8,8,0.1) 70%,rgba(8,8,8,0.4) 100%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.4) 0%,transparent 20%,transparent 75%,rgba(8,8,8,0.7) 100%)"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ 8 WEEKS JOURNEY -->
+<!-- ═══════════════════════════════════════════════════════ 8-WEEK PROGRAM -->
+<section class="sec" id="program">
+  <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(200,169,110,.08);border:1px solid var(--gold-d);border-radius:9999px;padding:8px 20px;margin-bottom:32px;">
+  <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);"></span>
+  <span style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;">Kommer snart</span>
+</div>
+<span class="lbl">Det 8-ugers program</span>
+  <div class="two-col">
+    <div>
+      <div class="serif-lg" style="margin-bottom:24px">
+        En 8-ugers transformerende<br>grupperejse for mænd.
+      </div>
+      <p class="body">Vi mødes én gang om ugen i 3 timer. Gruppen er bevidst lille — maksimalt 10 mænd — og skaber et kraftfuldt miljø for vækst, støtte, ansvarlighed og transformation.</p>
+      <p class="body">Dette er ikke en hurtig løsning. Vi går dybt. Vi arbejder med fundamentet for dit forhold til din krop, bevægelse, udtryk, selvtillid og nærvær.</p>
+      <p style="font-family:var(--serif);font-size:21px;color:var(--white);line-height:1.7;margin-bottom:32px;font-weight:600">
+        Hvis du møder op fuldt ud og gør arbejdet,<br>forlader du dette program som et forandret menneske.
+      </p>
+      <span class="gl"></span>
+      <span class="lbl" style="margin-bottom:20px">Inkluderet i programmet</span>
+      <ul class="incl-list">
+        <li><span class="incl-dash">—</span>8 ugentlige gruppesessioner, 3 timer hver</li>
+        <li><span class="incl-dash">—</span>2 private 1:1 sessions (1.5 hours each) med Emilie Rose</li>
+        <li><span class="incl-dash">—</span>Hjemmeøvelser, praksis og integrationsværktøjer</li>
+        <li><span class="incl-dash">—</span>Et støttende broderskab og transformerende fællesskab</li>
+        <li><span class="incl-dash">—</span>MOVEMEN vandflaske + notesbog</li>
+      </ul>
+      <div class="invest">
+        <div>
+          <div class="invest-price">4.995 – 5.995 kr.</div>
+          <div class="invest-lbl">Investering</div>
+        </div>
+        <div class="invest-det">
+          <p>Onsdage 18:30 – 21:30<br>September og oktober 2026<br>København — Maksimalt 10 mænd</p>
+        </div>
+      </div>
+      <div style="margin-top:36px"><a href="#apply" class="btn-g">Ansøg om din plads</a></div>
+    </div>
+    <div>
+      <span class="lbl" style="margin-bottom:20px">Hvad vi arbejder med</span>
+      <div class="wwww-grid">
+        <div class="wwww-cell"><div class="wwww-t">Åndedrætsarbejde</div><div class="wwww-b">Nervesystemsregulering og jordforbindelse</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Meditation</div><div class="wwww-b">Nærvær, stilhed og indre bevidsthed</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Danseøvelser</div><div class="wwww-b">Konkrete trin til enhver social situation</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Musikalitet</div><div class="wwww-b">Rytme, timing, flow og udtryk</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Fri bevægelse</div><div class="wwww-b">Freestyle, improvisation og tillid</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Qi Gong</div><div class="wwww-b">Energi, jordforbindelse og kropsbevidsthed</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Kropsliggjort lederskab</div><div class="wwww-b">Nærvær, jordet selvtillid og retning</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Følelsesmæssigt udtryk</div><div class="wwww-b">At bevæge det ord ikke kan nå</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Ægte samtaler</div><div class="wwww-b">Mindset, ærlige samtaler og vækst</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Målsætning</div><div class="wwww-b">Ansvarlighed og integration</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- IMAGE 3 — Emilie mid-movement, pure joy -->
+<!-- ═══════════════════════════════════════════════════════ 8 WEEKS JOURNEY -->
+<section class="sec-off">
+  <span class="lbl">Rejsen</span>
+  <div class="serif-lg" style="max-width:400px;margin-bottom:48px">
+    Uge for uge.<br>Skridt for skridt.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 64px">
+    <div>
+      <div class="week"><div class="wk-n">Uge 01</div><div class="wk-t">Jordforbindelse og det første skridt</div><div class="wk-d">Målsætning, intention, nærvær, jordforbindelse for nervesystemet og begyndelsen på rejsen.</div></div>
+      <div class="week"><div class="wk-n">Uge 02</div><div class="wk-t">De 4 elementer</div><div class="wk-d">Udforskning af forskellige bevægelseskvaliteter og energier i kroppen.</div></div>
+      <div class="week"><div class="wk-n">Uge 03</div><div class="wk-t">Dynamik</div><div class="wk-d">At lære rytme, flow, kontrast, timing og udtryk.</div></div>
+      <div class="week"><div class="wk-n">Uge 04</div><div class="wk-t">Dansegrund</div><div class="wk-d">Enkle trin, grooves, koordination og praktiske redskaber til social dans.</div></div>
+    </div>
+    <div style="border-left:1px solid var(--gold-d);padding-left:64px">
+      <div class="week"><div class="wk-n">Uge 05</div><div class="wk-t">Freestyle og flow</div><div class="wk-d">Fri bevægelse, improvisation, selvtillid og at lære at stole på sig selv.</div></div>
+      <div class="week"><div class="wk-n">Uge 06</div><div class="wk-t">At lede bevægelse</div><div class="wk-d">At lede dig selv, lede energi, lede en partner og kropsliggjort retning.</div></div>
+      <div class="week"><div class="wk-n">Uge 07</div><div class="wk-t">Find din stil</div><div class="wk-d">At opdage dit naturlige udtryk, din personlighed og din bevægelsesidentitet.</div></div>
+      <div class="week"><div class="wk-n">Uge 08</div><div class="wk-t">Integration og ekspansion</div><div class="wk-d">Integration, refleksion, fejring og nye mål for din fortsatte vækst.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ BROTHERHOOD -->
+<!-- ═══════════════════════════════════════════════════════ BROTHERHOOD -->
+<section class="sec-lt2">
+  <span class="lbl-dk">Broderskab og støtte</span>
+  <div class="two-col">
+    <div>
+      <div class="serif-lg-dk" style="margin-bottom:24px">
+        Dette handler ikke om perfektion.
+      </div>
+      <p class="body-dk">Dette er et rum hvor mænd støtter hinanden. Et rum til at udfordre dig selv. Et rum til at vokse. Et rum til at blive set.</p>
+      <p class="body-dk">Vi arbejder individuelt og sammen. Vi bliver hinandens spejle, ansvarlighedspartnere og et team.</p>
+      <p class="body-dk">Et løftende miljø hvor alle er med i det sammen.</p>
+      <span class="gl-dk"></span>
+    </div>
+    <div>
+      <div class="bro-stats">
+        <div class="bro-stat"><div class="bro-n">10</div><div class="bro-l">Mænd maksimalt</div></div>
+        <div class="bro-stat"><div class="bro-n">8</div><div class="bro-l">Uger sammen</div></div>
+      </div>
+      <div class="bro-quote">
+        <p>Et rum til at blive set.<br>Et rum til at vokse.<br>Et rum til endelig at slippe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ THE TRUTH -->
 <!-- ═══════════════════════════════════════════════════════ IS IT FOR YOU -->
 <section class="sec-off">
   <span class="lbl">Er MOVEMEN noget for dig?</span>
@@ -571,6 +650,7 @@
 
 </section>
 
+<!-- ═══════════════════════════════════════════════════════ FAQ -->
 <!-- ═══════════════════════════════════════════════════════ FAQ -->
 <section class="sec">
   <span class="lbl">Almindelige spørgsmål</span>

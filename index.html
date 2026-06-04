@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOVEMEN — A Movement Journey for Men with Emilie Rose</title>
+<title>MOVEMEN — A Movement Journey for Men with Emilie Rose Milling</title>
 <meta name="description" content="MOVEMEN is an 8-week transformational movement journey for men. Breathwork, dance, Qi Gong, nervous system work, and real talk. Copenhagen, September & October 2026.">
 <meta property="og:title" content="MOVEMEN — A Movement Journey for Men">
 <meta property="og:description" content="An 8-week transformational group journey for men. Breathwork, dance, Qi Gong, nervous system work. Copenhagen, September & October 2026. Maximum 10 men.">
@@ -63,37 +63,64 @@
 <a href="da.html" class="lang-switch">Dansk</a>
 <!-- ═══════════════════════════════════════════════════════ NAV -->
 <nav>
-  <div class="nav-logo">MOVEMEN</div>
+  <div class="nav-brand">
+    <div class="nav-logo">MOVEMEN</div>
+    <div class="nav-logo-sub">with Emilie Rose Milling</div>
+  </div>
   <div class="nav-links">
-    <a href="#program">Program</a>
     <a href="#one-to-one">1:1 Sessions</a>
+    <a href="#program">Program</a>
     <a href="#executive">Executive</a>
     <a href="#stories">Stories</a>
     <a href="quiz.html">Is it for me?</a>
     <a href="about.html">About</a>
   </div>
   <a href="#apply" class="nav-cta">Apply now</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
 </nav>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#one-to-one">1:1 Sessions</a>
+  <a href="#program">Program</a>
+  <a href="#executive">Executive</a>
+  <a href="#stories">Stories</a>
+  <a href="quiz.html">Is it for me?</a>
+  <a href="about.html">About</a>
+  <a href="#apply" class="btn-g" style="margin-top:12px">Apply now</a>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ HERO -->
-<section class="hero" style="background-image:url(images/hero.jpg);background-size:cover;background-position:center 40%;">
-  <div class="hero-eyebrow">with Emilie Rose</div>
-  <div class="hero-title">MOVEMEN</div>
-  <div class="hero-sub" style="">A movement journey for men.</div>
-  <div class="gl-c"></div>
-  <p class="hero-body">
-    You've spent years being comfortable<br>
-    with being uncomfortable in your body.
-  </p>
-  <div class="hero-ctas">
-    <a href="#apply" class="btn-g">Apply for your spot</a>
-    <a href="#program" class="btn-o">Learn more ↓</a>
+<section class="hero" style="background-image:url(images/hero.jpg);background-size:cover;background-position:center 40%;text-align:center;align-items:center;justify-content:center;">
+  <div style="position:relative;z-index:1;width:100%;max-width:700px;">
+    <div class="hero-eyebrow" style="margin-bottom:16px;">with Emilie Rose Milling</div>
+    <div class="hero-title" style="font-size:80px;margin-bottom:16px;">MOVEMEN</div>
+    <div class="hero-sub" style="margin-bottom:20px;">Private 1:1 movement sessions <span class="gold-gradient">for men.</span></div>
+    <p class="hero-body" style="margin:0 auto 36px;">
+      Feel more confident, free, and comfortable in your body. Through private movement sessions tailored entirely around you — your starting point, your pace, your transformation.
+    </p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#apply" class="btn-g">Book a 1:1 session</a>
+      <a href="#one-to-one" class="btn-o">Learn more</a>
+    </div>
+    <div style="margin-top:40px;display:flex;align-items:center;justify-content:center;gap:20px;font-size:12px;color:rgba(200,185,160,.6);font-weight:400;letter-spacing:2px;">
+      Copenhagen
+      <span style="color:var(--gold-dk)">·</span>
+      Online available
+      <span style="color:var(--gold-dk)">·</span>
+      For men
+    </div>
   </div>
-  <div class="hero-stats">
+  <div class="hero-stats" style="width:100%;margin-top:56px;">
     <div class="hstat"><div class="hstat-n">15+</div><div class="hstat-l">Years teaching movement</div></div>
-    <div class="hstat"><div class="hstat-n">3</div><div class="hstat-l">Years working with men</div></div>
-    <div class="hstat"><div class="hstat-n">10</div><div class="hstat-l">Spots per program</div></div>
-    <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Weeks of journey</div></div>
+    <div class="hstat"><div class="hstat-n">3</div><div class="hstat-l">Years working exclusively with men</div></div>
+    <div class="hstat"><div class="hstat-n">1:1</div><div class="hstat-l">Movement sessions</div></div>
+    <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Week group program</div></div>
   </div>
 </section>
 
@@ -102,37 +129,80 @@
 
 
 <!-- Einstein quote — below hero -->
-<div style="background:var(--black);padding:88px 72px;text-align:center;border-bottom:1px solid var(--gold-d)">
+<div style="background:var(--black2);padding:48px 72px;text-align:center;border-bottom:1px solid var(--gold-d)">
+  <hr class="ornament-line" style="max-width:280px;margin:0 auto 40px;">
   <div style="max-width:680px;margin:0 auto">
-    <div style="width:36px;height:1px;background:var(--gold);margin:0 auto 44px"></div>
-    <div style="font-family:var(--serif);font-size:44px;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:20px">
-      "Nothing happens until<br>something moves."
-    </div>
+    <blockquote style="font-family:var(--serif);font-size:40px;font-weight:600;color:var(--white);line-height:1.25;margin-bottom:18px;font-style:italic">
+      "Nothing happens until something moves."
+    </blockquote>
     <div style="font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;font-weight:400">— Albert Einstein</div>
-    <div style="width:36px;height:1px;background:var(--gold);margin:44px auto 0"></div>
   </div>
+  <hr class="ornament-line" style="max-width:280px;margin:40px auto 0;">
 </div>
+
+<!-- ═══════════════════════════════════════════════════════ CHOOSE YOUR PATH -->
+<section class="sec">
+  <div style="text-align:center;margin-bottom:52px">
+    <span class="lbl" style="justify-content:center">How to work with Emilie Rose Milling</span>
+    <div class="serif-lg" style="margin-bottom:14px">Choose your path.</div>
+    <p class="body" style="margin:0 auto;text-align:center;max-width:540px">Each offering is a held container — shaped by Emilie's teaching and your willingness to show up.</p>
+  </div>
+  <div class="offers-grid">
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/about.jpg);background-size:cover;background-position:center top;"></div>
+      <div class="offer-body">
+        <div class="offer-title">1:1 private sessions</div>
+        <p class="offer-desc">Movement work built entirely around you. Your body, your history, your pace. Copenhagen or online.</p>
+        <p class="offer-price">From 3.500 kr.</p>
+        <a href="#one-to-one" class="offer-cta">View packages →</a>
+      </div>
+    </article>
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/break-2.jpg);background-size:cover;background-position:center 45%;"></div>
+      <div class="offer-body">
+        <div class="offer-title">8-week group program</div>
+        <p class="offer-desc">A transformational cohort journey in Copenhagen. Maximum 10 men. Wednesdays 18:30 – 21:30.</p>
+        <p class="offer-price"><span style="font-size:10px;letter-spacing:3px;background:rgba(200,169,110,.1);border:1px solid var(--gold-d);border-radius:9999px;padding:4px 14px;text-transform:uppercase;margin-right:10px;">Coming soon</span></p>
+        <p class="offer-price">4.995 – 5.995 kr.</p>
+        <a href="#program" class="offer-cta">Explore the program →</a>
+      </div>
+    </article>
+    <article class="offer-card">
+      <div class="offer-img" style="background-image:url(images/break-1.jpg);background-size:cover;background-position:center 25%;"></div>
+      <div class="offer-body">
+        <div class="offer-title">MOVEMEN Executive</div>
+        <p class="offer-desc">Embodied leadership through movement — presence, nervous system regulation, and depth for men who lead.</p>
+        <p class="offer-price">Private sessions available</p>
+        <a href="#executive" class="offer-cta">Learn more →</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════════ FOR THE MAN WHO -->
 <section class="sec-lt">
   <span class="lbl-dk">This is for you</span>
   <div class="serif-lg-dk" style="max-width:560px;margin-bottom:48px">
-    If any of this sounds familiar.
+    For the man who.
   </div>
   <div style="max-width:680px">
     <ul class="man-list">
-      <li><span class="man-dash">—</span>You feel restricted or disconnected in your body</li>
-      <li><span class="man-dash">—</span>You avoid dancing — at parties, weddings, and concerts</li>
-      <li><span class="man-dash">—</span>You want to feel grounded, present, and at ease in your skin</li>
-      <li><span class="man-dash">—</span>You want confidence that lives in the body — not just the mind</li>
-      <li><span class="man-dash">—</span>You're ready to be challenged and to grow</li>
-      <li><span class="man-dash">—</span>You want something real — not another workshop, not a quick fix</li>
+      <li><span class="man-dash">—</span>Wants to feel more comfortable and free in his body</li>
+      <li><span class="man-dash">—</span>Is tired of feeling restricted or scared on the dance floor</li>
+      <li><span class="man-dash">—</span>Wants to be able to dance with his partner</li>
+      <li><span class="man-dash">—</span>Wants to walk into a room with embodied confidence</li>
+      <li><span class="man-dash">—</span>Is tired of holding back and staying at the bar</li>
+      <li><span class="man-dash">—</span>Wants to step onto a dance floor and actually have fun</li>
+      <li><span class="man-dash">—</span>Is tired of needing a drink to let go and express himself</li>
+      <li><span class="man-dash">—</span>Wants confidence that lives in the body — not just the mind</li>
+      <li><span class="man-dash">—</span>Is ready to challenge limiting beliefs and step into growth</li>
+      <li><span class="man-dash">—</span>Wants something real — not another workshop, not a quick fix</li>
     </ul>
   </div>
 </section>
 
 <!-- IMAGE 1 — between This is for you and 8-week program -->
-<div style="position:relative;height:560px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.15);background-image:url(images/break-1.jpg);background-size:cover;background-position:center 25%;">
+<div style="position:relative;height:520px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.15);background-image:url(images/break-1.jpg);background-size:cover;background-position:center 30%;">
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.1) 0%,rgba(8,8,8,0.05) 50%,rgba(8,8,8,0.3) 100%)"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.25) 0%,transparent 25%,transparent 75%,rgba(8,8,8,0.5) 100%)"></div>
   <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
@@ -140,122 +210,78 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ 8-WEEK PROGRAM -->
-<section class="sec" id="program">
-  <span class="lbl">The 8-week program</span>
+<section class="sec" id="one-to-one">
+  <span class="lbl">1:1 Private Sessions</span>
   <div class="two-col">
     <div>
       <div class="serif-lg" style="margin-bottom:24px">
-        An 8-week transformational<br>group journey for men.
+        Do you feel restricted, uncomfortable,<br>or insecure when you have to move?
       </div>
-      <p class="body">We meet once a week for 3 hours. The group is intentionally small — maximum 10 men — creating a powerful environment for growth, support, accountability, and transformation.</p>
-      <p class="body">This is not a quick fix. We go deep. We work with the foundation of how you relate to your body, movement, expression, confidence, and presence.</p>
-      <p style="font-family:var(--serif);font-size:21px;color:var(--white);line-height:1.7;margin-bottom:32px;font-weight:600">
-        If you show up fully and do the work,<br>you will leave this program a changed man.
-      </p>
+      <p class="body">You are not alone. Most men were never taught how to feel safe in creative movement. They were taught to perform, control, suppress, and stay composed — but not how to truly feel, express, and move freely in their bodies.</p>
+      <p class="body">Dance and movement are some of the most powerful tools for cultivating confidence, presence, vitality, emotional freedom, and deep self-connection. This is not just about learning to dance. This is about changing your relationship with your body.</p>
+      <p class="body">It's about moving beyond fear, self-consciousness, and overthinking — and reconnecting to your natural flow, confidence, rhythm, energy, and expression.</p>
       <span class="gl"></span>
-      <span class="lbl" style="margin-bottom:20px">Included in the program</span>
-      <ul class="incl-list">
-        <li><span class="incl-dash">—</span>8 weekly group sessions, 3 hours each</li>
-        <li><span class="incl-dash">—</span>2 private 1:1 sessions (1.5 hours each) with Emilie Rose</li>
-        <li><span class="incl-dash">—</span>Homework, practices, and integration tools</li>
-        <li><span class="incl-dash">—</span>A supportive brotherhood and transformational container</li>
-        <li><span class="incl-dash">—</span>MOVEMEN water bottle + notebook</li>
+      <p style="font-family:var(--serif);font-size:22px;color:var(--white);line-height:1.7;margin-bottom:28px;font-weight:400;font-style:italic">"When we move, we move energy. We release tension. We build trust with ourselves. We become more alive."</p>
+      <p class="body">The freedom you cultivate through movement doesn't only show up on the dance floor. It changes how you walk into a room. How you lead. How you speak. How you connect. How you take up space.</p>
+      <span class="gl"></span>
+      <span class="lbl" style="margin-bottom:16px">What we work with</span>
+      <ul class="cl">
+        <li><span class="dash">—</span>Breathwork & nervous system regulation</li>
+        <li><span class="dash">—</span>Meditation & grounding practices</li>
+        <li><span class="dash">—</span>Dance foundations & practical steps</li>
+        <li><span class="dash">—</span>Musicality, rhythm & creative expression</li>
+        <li><span class="dash">—</span>Freeform movement & freestyle</li>
+        <li><span class="dash">—</span>Qi Gong & body awareness</li>
+        <li><span class="dash">—</span>Confidence, mindset & real talk</li>
+        <li><span class="dash">—</span>Emotional expression & embodied leadership</li>
+        <li><span class="dash">—</span>Goal setting & integration</li>
       </ul>
-      <div class="invest">
-        <div>
-          <div class="invest-price">4.995 – 5.995 kr.</div>
-          <div class="invest-lbl">Investment</div>
+      <p style="font-family:var(--serif);font-size:20px;color:var(--white);margin-top:28px;line-height:1.7;font-weight:600">
+        Your masculinity in focus,<br>guided by my femininity — an ideal balance.
+      </p>
+    </div>
+    <div>
+      <span class="lbl" style="margin-bottom:20px">Packages & investment</span>
+      <div class="pkg-grid" style="display:grid;grid-template-columns:1fr;gap:1px;background:var(--gold-d)">
+        <div class="pkg">
+          <span class="pkg-tag">Starter</span>
+          <div class="pkg-name">3 Sessions</div>
+          <div class="pkg-desc">1.5 hours each. Personalised focus, homework, and integration tools. A powerful beginning.</div>
+          <div class="pkg-price">3.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book now →</a>
         </div>
-        <div class="invest-det">
-          <p>Wednesdays 18:30 – 21:30<br>September & October 2026<br>Copenhagen — Maximum 10 men</p>
+        <div class="pkg featured">
+          <span class="pkg-tag">Most chosen</span>
+          <div class="pkg-name">5 Sessions</div>
+          <div class="pkg-desc">1.5 hours each. A deeper transformation arc with personalised tools and ongoing support between sessions.</div>
+          <div class="pkg-price">5.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book now →</a>
+        </div>
+        <div class="pkg">
+          <span class="pkg-tag">Full Journey</span>
+          <div class="pkg-name">10 Sessions</div>
+          <div class="pkg-desc">1.5 hours each. A complete body-mind transformation with ongoing support and deep integration.</div>
+          <div class="pkg-price">9.500 kr.</div>
+          <a href="#apply" class="pkg-cta">Book now →</a>
         </div>
       </div>
-      <div style="margin-top:36px"><a href="#apply" class="btn-g">Apply for your spot</a></div>
-    </div>
-    <div>
-      <span class="lbl" style="margin-bottom:20px">What we work with</span>
-      <div class="wwww-grid">
-        <div class="wwww-cell"><div class="wwww-t">Breathwork</div><div class="wwww-b">Nervous system regulation and grounding</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Meditation</div><div class="wwww-b">Presence, stillness, and inner awareness</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Dance foundations</div><div class="wwww-b">Practical steps for any social situation</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Musicality</div><div class="wwww-b">Rhythm, timing, flow, and expression</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Freeform movement</div><div class="wwww-b">Freestyle, improvisation, and trust</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Qi Gong</div><div class="wwww-b">Energy, grounding, body awareness</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Embodied leadership</div><div class="wwww-b">Presence, grounded confidence, direction</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Emotional expression</div><div class="wwww-b">Moving what words cannot reach</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Real talk</div><div class="wwww-b">Mindset, honest conversation, growth</div></div>
-        <div class="wwww-cell"><div class="wwww-t">Goal setting</div><div class="wwww-b">Accountability and integration</div></div>
-      </div>
+      <p style="font-size:13px;color:var(--mid);margin-top:16px;">Copenhagen or online. Scheduling directly with Emilie.</p>
     </div>
   </div>
 </section>
 
-
-<!-- IMAGE 3 — Emilie mid-movement, pure joy -->
-<div style="position:relative;height:560px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-2.jpg);background-size:cover;background-position:center 45%;">
-  
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.4) 0%,rgba(8,8,8,0.1) 40%,rgba(8,8,8,0.1) 70%,rgba(8,8,8,0.4) 100%)"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.4) 0%,transparent 20%,transparent 75%,rgba(8,8,8,0.7) 100%)"></div>
-  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════ 8 WEEKS JOURNEY -->
-<section class="sec-off">
-  <span class="lbl">The journey</span>
-  <div class="serif-lg" style="max-width:400px;margin-bottom:48px">
-    Week by week.<br>Step by step.
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 64px">
-    <div>
-      <div class="week"><div class="wk-n">Week 01</div><div class="wk-t">Grounding & The First Move</div><div class="wk-d">Goal setting, intention, presence, nervous system grounding, and beginning the journey.</div></div>
-      <div class="week"><div class="wk-n">Week 02</div><div class="wk-t">The 4 Elements</div><div class="wk-d">Exploring different movement qualities and energies within the body.</div></div>
-      <div class="week"><div class="wk-n">Week 03</div><div class="wk-t">Dynamics</div><div class="wk-d">Learning rhythm, flow, contrast, timing, and expression.</div></div>
-      <div class="week"><div class="wk-n">Week 04</div><div class="wk-t">Dance Foundations</div><div class="wk-d">Simple steps, grooves, coordination, and practical tools for social dancing.</div></div>
-    </div>
-    <div style="border-left:1px solid var(--gold-d);padding-left:64px">
-      <div class="week"><div class="wk-n">Week 05</div><div class="wk-t">Freestyle & Flow</div><div class="wk-d">Freeform movement, improvisation, confidence, and learning to trust yourself.</div></div>
-      <div class="week"><div class="wk-n">Week 06</div><div class="wk-t">Leading Movement</div><div class="wk-d">Leading yourself, leading energy, leading a partner, and embodied direction.</div></div>
-      <div class="week"><div class="wk-n">Week 07</div><div class="wk-t">Find Your Style</div><div class="wk-d">Discovering your natural expression, personality, and movement identity.</div></div>
-      <div class="week"><div class="wk-n">Week 08</div><div class="wk-t">Integration & Expansion</div><div class="wk-d">Integration, reflection, celebration, and setting new goals for your continued growth.</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════ BROTHERHOOD -->
-<section class="sec-lt2">
-  <span class="lbl-dk">Brotherhood</span>
-  <div class="two-col">
-    <div>
-      <div class="serif-lg-dk" style="margin-bottom:28px">
-        You won't do this alone.
-      </div>
-      <p class="body-dk">The group is intentionally small — maximum 10 men. You become mirrors and accountability partners for each other. The container is as powerful as the work itself.</p>
-    </div>
-    <div>
-      <div class="bro-stats">
-        <div class="bro-stat"><div class="bro-n">10</div><div class="bro-l">Men maximum</div></div>
-        <div class="bro-stat"><div class="bro-n">8</div><div class="bro-l">Weeks together</div></div>
-      </div>
-      <div style="margin-top:36px;padding-top:36px;border-top:1px solid rgba(0,0,0,.1)">
-        <p style="font-family:var(--serif);font-size:20px;color:var(--dark);line-height:1.7;margin-bottom:28px;font-weight:400">The next cohort starts September 2026.<br>Maximum 10 men. Only a few spots remain.</p>
-        <a href="#apply" class="btn-g">Apply for your spot</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ THE TRUTH -->
+<!-- ═══════════════════════════════════════════════════════ EXECUTIVE -->
 <section class="sec">
   <span class="lbl">The truth</span>
-  <div class="qblock" style="max-width:760px">
-    <p>Most men carry a quiet discomfort in the body they've never spoken about. The stiffness. The self-consciousness at parties, weddings, concerts. The move toward the edge of the room.</p>
+  <div class="serif-lg" style="max-width:640px;margin-bottom:28px">
+    Imagine walking onto a dance floor<br>and actually enjoying yourself.
   </div>
-  <div class="truth-closing" style="max-width:600px;margin-top:48px">
-    <p>This is not about learning to dance. It is about changing your relationship with your body — moving beyond fear and overthinking, and reconnecting to your natural confidence, rhythm, and expression.</p>
-    <div class="truth-alive" style="margin-top:32px">More present. More free.<br><span>More alive.</span></div>
+  <div class="qblock" style="max-width:760px;margin-bottom:32px">
+    <p>No overthinking. No worrying about what people think. No feeling stiff, awkward, or trapped in your head. Just music. Movement. Presence. Confidence. Freedom.</p>
   </div>
+  <p class="body" style="max-width:680px">The happiness and vitality cultivated through dance and movement is unlike anything else. It connects body, mind, heart, and soul in a deeply powerful way. Movement becomes medicine.</p>
+  <p class="body" style="max-width:680px">It creates confidence physically, emotionally, mentally, and socially. It helps move stuck energy, tension, stress, emotional stagnation, and suppressed expression.</p>
+  <div class="truth-alive" style="margin-top:32px">Dance brings<br><span>vitality.</span></div>
 </section>
 
 
@@ -273,7 +299,7 @@
 </div>
 
 <!-- IMAGE 2 — Emilie at the barre, focused -->
-<div style="position:relative;height:500px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-3.jpg);background-size:cover;background-position:center 25%;">
+<div style="position:relative;height:520px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-3.jpg);background-size:cover;background-position:center 55%;">
   
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.1) 0%,rgba(8,8,8,0.05) 40%,rgba(8,8,8,0.5) 100%)"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.35) 0%,transparent 25%,transparent 75%,rgba(8,8,8,0.7) 100%)"></div>
@@ -282,8 +308,8 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ TESTIMONIALS -->
-<section id="stories" style="padding:96px 0;background:var(--black);border-bottom:1px solid var(--gold-d);overflow:hidden">
-  <div style="padding:0 72px;margin-bottom:64px">
+<section id="stories" style="padding:64px 0;background:var(--black);border-bottom:1px solid var(--gold-d);overflow:hidden">
+  <div style="padding:0 72px;margin-bottom:40px">
     <span class="lbl">From the men who showed up</span>
     <div class="serif-lg" style="max-width:460px">
       Testimonials.
@@ -348,105 +374,62 @@
   </div>
 </section>
 <!-- ═══════════════════════════════════════════════════════ 1:1 -->
-<section class="sec" id="one-to-one">
-  <span class="lbl">1:1 Private Sessions</span>
-  <div class="two-col">
-    <div>
-      <div class="serif-lg" style="margin-bottom:24px">
-        For the man who needs a program<br>built entirely around him.
-      </div>
-      <p class="body">Your body. Your history. Your starting point. Your pace. No fixed curriculum, no group dynamic — just Emilie's full attention on you and exactly what you need.</p>
-      <p class="body">Every man who comes arrives differently. The 1:1 format honours that completely. What we work on, how we work, and where we go is shaped entirely by you.</p>
-      <span class="gl"></span>
-      <span class="lbl" style="margin-bottom:16px">Sessions draw from</span>
-      <ul class="cl">
-        <li><span class="dash">—</span>Movement & dance foundations tailored to the individual</li>
-        <li><span class="dash">—</span>Breathwork & nervous system regulation</li>
-        <li><span class="dash">—</span>Somatic awareness & body intelligence</li>
-        <li><span class="dash">—</span>Rhythm, musicality & creative expression</li>
-        <li><span class="dash">—</span>Qi Gong & grounding practices</li>
-        <li><span class="dash">—</span>Mindset, real conversation & emotional expression</li>
-        <li><span class="dash">—</span>Embodied confidence & grounded leadership presence</li>
-        <li><span class="dash">—</span>Goal setting, homework & integration between sessions</li>
-      </ul>
-      <p style="font-family:var(--serif);font-size:20px;color:var(--white);margin-top:28px;line-height:1.7;font-weight:600">
-        This isn't coaching. This isn't therapy.<br>This is movement work at its deepest.
-      </p>
-    </div>
-    <div>
-      <span class="lbl" style="margin-bottom:20px">Packages & investment</span>
-      <div class="pkg-grid" style="display:grid;grid-template-columns:1fr;gap:1px;background:var(--gold-d)">
-        <div class="pkg">
-          <span class="pkg-tag">Starter</span>
-          <div class="pkg-name">3 Sessions</div>
-          <div class="pkg-desc">1.5 hours each. Personalised focus, homework, and integration tools. A powerful beginning.</div>
-          <div class="pkg-price">3.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book now →</a>
-        </div>
-        <div class="pkg featured">
-          <span class="pkg-tag">Most chosen</span>
-          <div class="pkg-name">5 Sessions</div>
-          <div class="pkg-desc">1.5 hours each. A deeper transformation arc with personalised tools and ongoing support between sessions.</div>
-          <div class="pkg-price">5.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book now →</a>
-        </div>
-        <div class="pkg">
-          <span class="pkg-tag">Full Journey</span>
-          <div class="pkg-name">10 Sessions</div>
-          <div class="pkg-desc">1.5 hours each. A complete body-mind transformation with ongoing support and deep integration.</div>
-          <div class="pkg-price">9.500 kr.</div>
-          <a href="#apply" class="pkg-cta">Book now →</a>
-        </div>
-      </div>
-      <p style="font-size:13px;color:var(--mid);margin-top:16px;">Copenhagen or online. Scheduling directly with Emilie.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ EXECUTIVE -->
 <section class="sec" id="executive">
   <span class="lbl">MOVEMEN Executive</span>
-  <div class="serif-lg" style="max-width:540px;margin-bottom:18px">
-    Embodied leadership & presence<br>for men in leadership.
+  <div class="serif-lg" style="max-width:580px;margin-bottom:24px">
+    Leadership is physical.
   </div>
-  <p class="body" style="max-width:620px">Most leadership development focuses on strategy, performance, communication, and mindset. But very few spaces teach men how to actually inhabit themselves — how to feel grounded under pressure, regulate their nervous system, and lead with presence instead of tension.</p>
+  <p class="body" style="max-width:660px">People do not only respond to words. They respond to energy. Presence. Regulation. Confidence. Authenticity. A man who feels comfortable in his body leads differently. He communicates differently. He handles pressure differently. He enters rooms differently.</p>
   <div class="exec-phil">
     <div class="ep-q">"True confidence is embodied."</div>
-    <p>Presence cannot be faked. Leadership cannot only be intellectual. Performance without connection eventually creates disconnection.</p>
+    <p>Presence cannot be faked. Leadership cannot only be intellectual. And performance without connection eventually creates disconnection.</p>
     <p>When men reconnect to their bodies, movement, emotions, expression, and vitality — they become more grounded leaders, better communicators, stronger partners, and more fully alive human beings.</p>
     <div class="ep-close">This work is not about becoming someone else.<br>It is about removing what is in the way of who you already are.</div>
   </div>
-  <div class="three-col-auto">
-    <div class="exec-card">
-      <span class="ec-tag">Available now</span>
-      <div class="ec-t">Private 1:1 Executive Sessions</div>
-      <div class="ec-b">Highly personalised embodiment and movement sessions for leaders. Movement, nervous system regulation, breathwork, rhythm, confidence work, emotional awareness, leadership presence, and grounding.</div>
-      <ul class="ec-list">
-        <li><span class="dash">—</span>CEOs, founders, executives</li>
-        <li><span class="dash">—</span>Public speakers and entrepreneurs</li>
-        <li><span class="dash">—</span>Men navigating burnout or pressure</li>
-        <li><span class="dash">—</span>Leaders wanting greater authenticity</li>
+  <div class="two-col" style="margin-top:52px;gap:60px">
+    <div>
+      <span class="lbl" style="margin-bottom:20px">Movement work develops</span>
+      <ul class="cl">
+        <li><span class="dash">—</span>Grounded confidence & authentic presence</li>
+        <li><span class="dash">—</span>Emotional intelligence & self-awareness</li>
+        <li><span class="dash">—</span>Nervous system resilience under pressure</li>
+        <li><span class="dash">—</span>Social ease & embodied communication</li>
+        <li><span class="dash">—</span>Creativity, adaptability & charisma</li>
+      </ul>
+      <span class="lbl" style="margin-bottom:16px;margin-top:36px">Especially powerful for men who</span>
+      <ul class="cl">
+        <li><span class="dash">—</span>Carry high responsibility or operate under pressure</li>
+        <li><span class="dash">—</span>Struggle to switch off or feel disconnected from themselves</li>
+        <li><span class="dash">—</span>Want deeper confidence and personal freedom</li>
+        <li><span class="dash">—</span>Want to lead from authenticity instead of pressure</li>
       </ul>
     </div>
-    <div class="exec-card">
-      <span class="ec-tag">Coming 2026</span>
-      <div class="ec-t">Small Group Intensives</div>
-      <div class="ec-b">Carefully curated groups for men who want both personal transformation and the power of shared growth. Men witness themselves through each other. Challenge each other. Support each other. And grow together.</div>
-    </div>
-    <div class="exec-card">
-      <span class="ec-tag">Coming 2026 · Bali</span>
-      <div class="ec-t">Executive Retreats</div>
-      <div class="ec-b">Immersive multi-day retreats for leaders who want to reconnect beyond performance and productivity. Movement, embodiment, nervous system regulation, breathwork, music, reflection, and deep restoration.</div>
-      <p style="font-family:var(--serif);font-size:15px;color:var(--white);margin-top:18px;line-height:1.8">This is not a corporate seminar.<br>It is a transformational experience.</p>
+    <div>
+      <div class="exec-card" style="margin-bottom:16px">
+        <span class="ec-tag">Available now</span>
+        <div class="ec-t">Private 1:1 Executive Sessions</div>
+        <div class="ec-b">Highly personalised sessions combining movement, nervous system regulation, breathwork, rhythm, confidence work, emotional awareness, leadership presence, and grounding. Tailored entirely to you.</div>
+        <ul class="ec-list" style="margin-top:16px">
+          <li><span class="dash">—</span>CEOs, founders & executives</li>
+          <li><span class="dash">—</span>Public speakers & entrepreneurs</li>
+          <li><span class="dash">—</span>Men navigating burnout or high pressure</li>
+          <li><span class="dash">—</span>Leaders wanting greater authenticity & presence</li>
+        </ul>
+      </div>
+      <div class="exec-card">
+        <span class="ec-tag">Coming 2026/2027 · Bali</span>
+        <div class="ec-t">Executive Retreats</div>
+        <div class="ec-b">Immersive multi-day retreats for leaders who want to reconnect beyond performance. Movement, embodiment, nervous system work, breathwork, music, reflection, and deep restoration. This is not a corporate seminar. It is a transformational experience.</div>
+      </div>
     </div>
   </div>
-  <div style="margin-top:32px"><a href="#apply" class="btn-o">Join the Executive waitlist</a></div>
+  <div style="margin-top:40px"><a href="#apply" class="btn-o">Book an executive session</a></div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════════ ABOUT -->
 <section class="sec-off" id="about">
-  <span class="lbl">Emilie Rose</span>
+  <span class="lbl">Emilie Rose Milling</span>
   <div class="two-col">
     <div>
       <div class="serif-lg" style="margin-bottom:28px">
@@ -467,6 +450,117 @@
 
 
 <!-- ═══════════════════════════════════════════════════════ IS IT FOR YOU -->
+<div style="position:relative;height:520px;overflow:hidden;border-bottom:1px solid rgba(200,169,110,0.12);background-image:url(images/break-2.jpg);background-size:cover;background-position:center 40%;">
+  
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,0.4) 0%,rgba(8,8,8,0.1) 40%,rgba(8,8,8,0.1) 70%,rgba(8,8,8,0.4) 100%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.4) 0%,transparent 20%,transparent 75%,rgba(8,8,8,0.7) 100%)"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2),transparent)"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.15),transparent)"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ 8 WEEKS JOURNEY -->
+<section class="sec" id="program">
+  <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(200,169,110,.08);border:1px solid var(--gold-d);border-radius:9999px;padding:8px 20px;margin-bottom:32px;">
+  <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);"></span>
+  <span style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;">Coming soon</span>
+</div>
+<span class="lbl">The 8-week program</span>
+  <div class="two-col">
+    <div>
+      <div class="serif-lg" style="margin-bottom:24px">
+        An 8-week transformational<br>group journey for men.
+      </div>
+      <p class="body">We meet once a week for 3 hours. The group is intentionally small — maximum 10 men — creating a powerful environment for growth, support, accountability, and transformation.</p>
+      <p class="body">This is not a quick fix. We go deep. We work with the foundation of how you relate to your body, movement, expression, confidence, and presence.</p>
+      <p style="font-family:var(--serif);font-size:21px;color:var(--white);line-height:1.7;margin-bottom:32px;font-weight:600">
+        If you show up fully and do the work,<br>you will leave this program a changed man.
+      </p>
+      <span class="gl"></span>
+      <span class="lbl" style="margin-bottom:20px">Included in the program</span>
+      <ul class="incl-list">
+        <li><span class="incl-dash">—</span>8 weekly group sessions, 3 hours each</li>
+        <li><span class="incl-dash">—</span>2 private 1:1 sessions (1.5 hours each) with Emilie Rose Milling</li>
+        <li><span class="incl-dash">—</span>Homework, practices, and integration tools</li>
+        <li><span class="incl-dash">—</span>A supportive brotherhood and transformational container</li>
+        <li><span class="incl-dash">—</span>MOVEMEN water bottle + notebook</li>
+      </ul>
+      <div class="invest">
+        <div>
+          <div class="invest-price">4.995 – 5.995 kr.</div>
+          <div class="invest-lbl">Investment</div>
+        </div>
+        <div class="invest-det">
+          <p>Wednesdays 18:30 – 21:30<br>September & October 2026<br>Copenhagen — Maximum 10 men</p>
+        </div>
+      </div>
+      <div style="margin-top:36px"><a href="#apply" class="btn-g">Apply for your spot</a></div>
+    </div>
+    <div>
+      <span class="lbl" style="margin-bottom:20px">What we work with</span>
+      <div class="wwww-grid">
+        <div class="wwww-cell"><div class="wwww-t">Breathwork</div><div class="wwww-b">Nervous system regulation and grounding</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Meditation</div><div class="wwww-b">Presence, stillness, and inner awareness</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Dance foundations</div><div class="wwww-b">Practical steps for any social situation</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Musicality</div><div class="wwww-b">Rhythm, timing, flow, and expression</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Freeform movement</div><div class="wwww-b">Freestyle, improvisation, and trust</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Qi Gong</div><div class="wwww-b">Energy, grounding, body awareness</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Embodied leadership</div><div class="wwww-b">Presence, grounded confidence, direction</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Emotional expression</div><div class="wwww-b">Moving what words cannot reach</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Real talk</div><div class="wwww-b">Mindset, honest conversation, growth</div></div>
+        <div class="wwww-cell"><div class="wwww-t">Goal setting</div><div class="wwww-b">Accountability and integration</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- IMAGE 3 — Emilie mid-movement, pure joy -->
+<section class="sec-off">
+  <span class="lbl">The journey</span>
+  <div class="serif-lg" style="max-width:400px;margin-bottom:48px">
+    Week by week.<br>Step by step.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 64px">
+    <div>
+      <div class="week"><div class="wk-n">Week 01</div><div class="wk-t">Grounding & The First Move</div><div class="wk-d">Goal setting, intention, presence, nervous system grounding, and beginning the journey.</div></div>
+      <div class="week"><div class="wk-n">Week 02</div><div class="wk-t">The 4 Elements</div><div class="wk-d">Exploring different movement qualities and energies within the body.</div></div>
+      <div class="week"><div class="wk-n">Week 03</div><div class="wk-t">Dynamics</div><div class="wk-d">Learning rhythm, flow, contrast, timing, and expression.</div></div>
+      <div class="week"><div class="wk-n">Week 04</div><div class="wk-t">Dance Foundations</div><div class="wk-d">Simple steps, grooves, coordination, and practical tools for social dancing.</div></div>
+    </div>
+    <div style="border-left:1px solid var(--gold-d);padding-left:64px">
+      <div class="week"><div class="wk-n">Week 05</div><div class="wk-t">Freestyle & Flow</div><div class="wk-d">Freeform movement, improvisation, confidence, and learning to trust yourself.</div></div>
+      <div class="week"><div class="wk-n">Week 06</div><div class="wk-t">Leading Movement</div><div class="wk-d">Leading yourself, leading energy, leading a partner, and embodied direction.</div></div>
+      <div class="week"><div class="wk-n">Week 07</div><div class="wk-t">Find Your Style</div><div class="wk-d">Discovering your natural expression, personality, and movement identity.</div></div>
+      <div class="week"><div class="wk-n">Week 08</div><div class="wk-t">Integration & Expansion</div><div class="wk-d">Integration, reflection, celebration, and setting new goals for your continued growth.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ BROTHERHOOD -->
+<section class="sec-lt2">
+  <span class="lbl-dk">Brotherhood</span>
+  <div class="two-col">
+    <div>
+      <div class="serif-lg-dk" style="margin-bottom:28px">
+        You won't do this alone.
+      </div>
+      <p class="body-dk">The group is intentionally small — maximum 10 men. You become mirrors and accountability partners for each other. The container is as powerful as the work itself.</p>
+    </div>
+    <div>
+      <div class="bro-stats">
+        <div class="bro-stat"><div class="bro-n">10</div><div class="bro-l">Men maximum</div></div>
+        <div class="bro-stat"><div class="bro-n">8</div><div class="bro-l">Weeks together</div></div>
+      </div>
+      <div style="margin-top:36px;padding-top:36px;border-top:1px solid rgba(0,0,0,.1)">
+        <p style="font-family:var(--serif);font-size:20px;color:var(--dark);line-height:1.7;margin-bottom:28px;font-weight:400">The next cohort starts September 2026.<br>Maximum 10 men. Only a few spots remain.</p>
+        <a href="#apply" class="btn-g">Apply for your spot</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ THE TRUTH -->
 <section class="sec-off">
   <span class="lbl">Is MOVEMEN for you?</span>
   <div class="serif-lg" style="max-width:540px;margin-bottom:14px">
@@ -565,17 +659,17 @@
   <div class="final-rule"></div>
   <span class="lbl" style="text-align:center;display:block;margin-bottom:28px">One question</span>
   <div class="final-h">What would happen if you finally<br>stopped holding yourself back?</div>
-  <p class="final-sub">Copenhagen · September & October 2026 · Maximum 10 men</p>
+  <p class="final-sub">Copenhagen & Online · Private 1:1 sessions for men</p>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-    <a href="#apply" class="btn-g">Apply for your spot</a>
-    <a href="#apply" class="btn-o">Book a 1:1 session</a>
+    <a href="#apply" class="btn-g">Book a 1:1 session</a>
+    <a href="#apply" class="btn-o">Join the waitlist</a>
     <a href="#" class="btn-waitlist" onclick="openWaitlist(event)">Join the waitlist</a>
   </div>
   <div class="final-close">
-    <p>Stop holding yourself back.<br>Start moving through life differently.</p>
+    <p>Stop holding yourself back.<br><strong style="color:var(--gold)">Start moving through life differently.</strong></p>
   </div>
   <div style="margin-top:40px;font-size:9px;color:#333;letter-spacing:3px;text-transform:uppercase">
-    MOVEMEN · with Emilie Rose · Copenhagen & Bali · 2026
+    MOVEMEN · with Emilie Rose Milling · Copenhagen & Bali · 2026
   </div>
 </section>
 
