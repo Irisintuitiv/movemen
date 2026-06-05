@@ -241,13 +241,13 @@ nav {
 .man-cell:last-child  { background: var(--cream2); }
 .man-list { list-style: none; }
 .man-list li {
-  display: flex; gap: 16px; align-items: flex-start;
-  font-size: 16px; color: #C8BFA8; padding: 11px 0;
-  border-bottom: 1px solid rgba(240,232,216,.07); font-weight: 400; line-height: 1.6;
+  display: flex; gap: 20px; align-items: baseline;
+  font-size: 18px; color: #E8E0CE; padding: 16px 0;
+  border-bottom: 1px solid rgba(240,232,216,.08); font-weight: 300; line-height: 1.5;
 }
 .man-list-lt li { color: #4A4438; border-bottom-color: rgba(0,0,0,.07); }
 .man-list li:last-child { border-bottom: none; }
-.man-dash { color: rgba(240,232,216,.3); flex-shrink: 0; font-size: 14px; margin-top: 3px; }
+.man-dash { color: rgba(240,232,216,.22); flex-shrink: 0; font-size: 11px; }
 
 /* ─── QUOTE BLOCKS ──────────────────────────────────────── */
 .qblock {
