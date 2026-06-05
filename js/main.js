@@ -22,6 +22,28 @@ function closeWaitlist() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  // ─── MOBILE NAV ───────────────────────────────────────────
+  var hamburger = document.getElementById('navHamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  var mobileClose = document.getElementById('mobileNavClose');
+  function openMobileNav() {
+    mobileNav.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  if (hamburger) hamburger.addEventListener('click', openMobileNav);
+  if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
+  if (mobileNav) {
+    mobileNav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', closeMobileNav);
+    });
+  }
+
   // Wire all apply-triggering buttons
   document.querySelectorAll(
     'a[href="#apply"], a.nav-cta, a.pkg-cta, a.btn-g[href^="mailto"], a.btn-o[href^="mailto"]'
