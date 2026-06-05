@@ -390,10 +390,11 @@ nav {
 .dash { color: rgba(240,232,216,.4); flex-shrink: 0; }
 
 /* ─── FAQ ───────────────────────────────────────────────── */
-.fq { padding: 24px 28px; border: 1px solid #E0D8CC; border-radius: 14px; margin-bottom: 10px; background: rgba(255,255,255,.6); }
-.fq:last-child { border-bottom: none; }
-.fq-q { font-family: var(--serif); font-size: 24px; color: var(--dark); margin-bottom: 14px; font-weight: 600; }
-.fq-a { font-size: 16px; color: #5C5650; line-height: 2; font-weight: 400; }
+.fq { padding: 28px 0; border-bottom: 1px solid #D0C8BC; }
+.fq:first-of-type { border-top: 1px solid #D0C8BC; }
+.fq:last-child { border-bottom: 1px solid #D0C8BC; }
+.fq-q { font-family: var(--serif); font-size: 22px; color: #1C1916; margin-bottom: 12px; font-weight: 600; line-height: 1.35; }
+.fq-a { font-size: 16px; color: #4A4438; line-height: 1.9; font-weight: 400; max-width: 680px; }
 
 /* ─── 1:1 PACKAGES ──────────────────────────────────────── */
 .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--gold-d); margin-top: 40px; }
