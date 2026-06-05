@@ -246,8 +246,8 @@ nav {
 .man-list { list-style: none; }
 .man-list li {
   display: flex; gap: 16px; align-items: flex-start;
-  font-size: 16px; color: #4A4438; padding: 11px 0;
-  border-bottom: 1px solid rgba(0,0,0,.07); font-weight: 400; line-height: 1.6;
+  font-size: 16px; color: var(--man-color, #4A4438); padding: 11px 0;
+  border-bottom: 1px solid var(--man-border, rgba(0,0,0,.07)); font-weight: 400; line-height: 1.6;
 }
 .man-list li:last-child { border-bottom: none; }
 .man-dash { color: var(--gold-dk); flex-shrink: 0; font-size: 18px; margin-top: 1px; }
@@ -393,10 +393,10 @@ nav {
 .dash { color: var(--gold); flex-shrink: 0; }
 
 /* ─── FAQ ───────────────────────────────────────────────── */
-.fq { padding: 24px 28px; border: 1px solid var(--gold-d); border-radius: 14px; margin-bottom: 10px; }
+.fq { padding: 24px 28px; border: 1px solid #D8D0C4; border-radius: 14px; margin-bottom: 10px; background: var(--cream-elevated, #faf8f5); }
 .fq:last-child { border-bottom: none; }
-.fq-q { font-family: var(--serif); font-size: 24px; color: var(--white); margin-bottom: 14px; font-weight: 600; }
-.fq-a { font-size: 16px; color: #C8BFA8; line-height: 2; font-weight: 400; }
+.fq-q { font-family: var(--serif); font-size: 24px; color: var(--dark); margin-bottom: 14px; font-weight: 600; }
+.fq-a { font-size: 16px; color: #5C5650; line-height: 2; font-weight: 400; }
 
 /* ─── 1:1 PACKAGES ──────────────────────────────────────── */
 .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--gold-d); margin-top: 40px; }
