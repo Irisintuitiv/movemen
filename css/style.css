@@ -538,6 +538,7 @@ footer {
   .rfy-grid { grid-template-columns: 1fr; }
   .pkg-grid { grid-template-columns: 1fr; }
   .offers-grid { grid-template-columns: 1fr; }
+  .pkg-cards { grid-template-columns: 1fr !important; }
   .hero-stats { flex-wrap: wrap; }
   .hstat { border-right: none; border-bottom: 1px solid var(--gold-d); padding: 24px 32px; width: 50%; }
   .hstat:last-child { border-bottom: none; }
