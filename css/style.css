@@ -242,11 +242,12 @@ nav {
 .man-list { list-style: none; }
 .man-list li {
   display: flex; gap: 16px; align-items: flex-start;
-  font-size: 16px; color: var(--man-color, #4A4438); padding: 11px 0;
-  border-bottom: 1px solid var(--man-border, rgba(0,0,0,.07)); font-weight: 400; line-height: 1.6;
+  font-size: 16px; color: #C8BFA8; padding: 11px 0;
+  border-bottom: 1px solid rgba(240,232,216,.07); font-weight: 400; line-height: 1.6;
 }
+.man-list-lt li { color: #4A4438; border-bottom-color: rgba(0,0,0,.07); }
 .man-list li:last-child { border-bottom: none; }
-.man-dash { color: rgba(240,232,216,.45); flex-shrink: 0; font-size: 18px; margin-top: 1px; }
+.man-dash { color: rgba(240,232,216,.3); flex-shrink: 0; font-size: 14px; margin-top: 3px; }
 
 /* ─── QUOTE BLOCKS ──────────────────────────────────────── */
 .qblock {
